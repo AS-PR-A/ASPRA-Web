@@ -12,28 +12,31 @@ body {
 
 /*Ajustes Botones*/
 
-.bton {
+.btonAdoptar {
   display: inline-block;
   font-size: 100%;
-  background-color: rgb(160, 231, 225);
-  color: rgb(0, 0, 0);
-  border: solid 2px;
-  border-color: darkslategrey;
-  border-radius: 30px;
+  background-color: rgb(11, 5, 69);
+  font-family: MartianMono;
+  color: rgb(255, 255, 255);
+  border: solid 1px;
+  border-color: rgb(11, 5, 69);
+  border-radius: 38px;
   padding: 1%;
   left: 20%;
-  margin-top: 1%;
+  margin-top: 120%;
   position: relative;
   text-align: center;
-  width: 36%;
+  width: 80%;
   min-height: 40px;
   height: 50%;
   cursor: pointer;
 }
-.bton:hover {
-  background-color: #006075;
+.btonAdoptar:hover {
+  background-color: rgb(22, 10, 129);
+  border-color: rgb(22, 10, 129);
   color: rgb(252, 252, 252);
 }
+
 .bton1 {
   display: inline-block;
   font-size: 100%;
@@ -68,13 +71,14 @@ body {
   text-align: center;
 }
 
-#texto {
-  font-family: "Amatic SC", cursive;
-  font-size: 220%;
-  font-weight: bolder;
+#textoAdopcion {
+  font-family: "BarlowCondensed-Thin";
+  font-size: 200%;
+
   text-align: center;
-  color: #c7c7c7;
-  background-color: rgba(82, 82, 82, 0.487);
+  color: #040000;
+  background-color: rgba(204, 204, 204, 0.362);
+  margin-right: 80px;
 }
 
 .imig1 {
@@ -95,7 +99,6 @@ body {
   background-color: aliceblue;
   border-bottom: solid 1px;
   border-color: rgb(185, 185, 185);
-  background-image: url(/assets/img/fondo.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -110,17 +113,30 @@ body {
   background-position: center;
 }
 
+.nuevo {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 400px;
+  background-image: url(/assets/img/adopcion.jpg);
+  border-radius: 900px;
+  background-size: cover;
+  background-position: center;
+  background-color: #006075;
+}
+
 #titulo {
-  font-family: "Raleway", sans-serif;
-  font-size: 500%;
+  font-family: BarlowCondensed;
+  font-size: 560%;
   font-weight: 900;
-  color: #ffffff;
-  padding-top: 10%;
+  color: #000000;
+  padding-top: 4%;
+  margin-right: 70px;
 }
 
 #subtexto {
   font-family: "Raleway", sans-serif;
-  color: #dbdbdbc8;
+  color: #dbdbdb88;
   margin-bottom: 10%;
 }
 
@@ -164,53 +180,56 @@ body {
   background-color: aliceblue;
   border-bottom: solid 1px;
   border-color: rgb(185, 185, 185);
-  background-image: url(/assets/img/adoptame.jpg);
+  background-image: url(/assets/img/maltrato1.jpg);
   background-size: cover;
 }
 
-#Adoptatumascota4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 400%;
+#tituloSalva {
+  font-family: BarlowCondensed;
+  font-size: 800%;
   font-weight: 900;
-  color: #2e2c2c;
+  color: #000000;
   padding-top: 3%;
   padding-right: 60%;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 #Presentacion4 {
   width: 40%;
-  min-width: 330px;
+  min-width: 470px;
   height: 20%;
   margin-top: 4%;
+  margin-left: -5%;
   padding: 1%;
-  background-color: rgba(82, 82, 82, 0.264);
-  border-radius: 20px;
-  box-sizing: border-box;
+  font-size: 200%;
+  font-family: BarlowCondensed-Bold;
 }
 
 .bton4 {
   display: inline-block;
-  font-size: 100%;
-  background-color: rgb(160, 231, 225);
-  color: rgb(56, 56, 56);
+  font-size: 140%;
+  background-color: rgb(11, 5, 69);
+  color: rgb(255, 255, 255);
   border: solid 2px;
-  border-color: darkslategrey;
-  border-radius: 30px;
+  border-color: rgb(11, 5, 69);
   padding: 1%;
   left: 13%;
-  margin-top: 60%;
+  margin-top: 90%;
+  margin-left: 50%;
   position: relative;
   text-align: center;
   width: 36%;
   min-height: 60px;
   height: 50%;
   cursor: pointer;
+  font-family: MartianMono;
 }
 
 .bton4:hover {
-  background-color: #750000;
+  background-color: #ca0202;
+  border-color: #ca0202;
   color: rgb(252, 252, 252);
 }
 
@@ -224,33 +243,28 @@ body {
   background-color: rgb(234, 253, 255);
   border-bottom: solid 1px;
   border-color: rgb(185, 185, 185);
-  background-image: url(/assets/img/veterinarios.png);
+  background-image: url(/assets/img/veterinarios2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #specialists {
-  font-family: "Raleway", sans-serif;
+  font-family: BarlowCondensed;
   font-size: 400%;
   font-weight: 900;
-  color: #2e2c2c;
-  padding-top: 5%;
-  padding-right: 6%;
-  text-align: center;
+  color: #000000;
+  margin-right: 170px;
 }
 
 #Presentacion2 {
-  width: 40%;
-  min-width: 400px;
-  height: 20%;
-  position: relative;
-  left: 2%;
-  margin-top: 2%;
-  padding: 1%;
-  background-color: rgba(82, 82, 82, 0.485);
-  border-radius: 20px;
-  box-sizing: border-box;
-  left: 30%;
+  font-family: "BarlowCondensed-Thin";
+  font-size: 200%;
+
+  text-align: right;
+  color: #040000;
+  background-color: rgba(204, 204, 204, 0.362);
+  margin-right: 80px;
+  margin-top: 90px;
 }
 
 .boton1 {
@@ -263,14 +277,15 @@ body {
   left: 35%;
 }
 
-.bton3 {
+.btonVeterinarios {
   display: inline-block;
   font-size: 100%;
-  background-color: rgb(160, 231, 225);
-  color: rgb(56, 56, 56);
-  border: solid 2px;
-  border-color: darkslategrey;
-  border-radius: 30px;
+  background-color: rgb(11, 5, 69);
+  font-family: MartianMono;
+  color: rgb(255, 255, 255);
+  border: solid 1px;
+  border-color: rgb(11, 5, 69);
+  border-radius: 38px;
   padding: 1%;
   left: 13%;
   margin-top: 10%;
@@ -282,8 +297,9 @@ body {
   cursor: pointer;
 }
 
-.bton3:hover {
-  background-color: #006075;
+.btonVeterinarios:hover {
+  background-color: rgb(22, 10, 129);
+  border-color: rgb(22, 10, 129);
   color: rgb(252, 252, 252);
 }
 
@@ -534,7 +550,6 @@ i.fa-brands.fa-whatsapp.fa-2xl:hover {
 }
 
 .row2 {
-  margin-top: 20px;
   display: flex;
 }
 
@@ -574,7 +589,7 @@ i.fa-brands.fa-whatsapp.fa-2xl:hover {
 }
 
 i.fa-solid.fa-user-plus {
-  color: rgb(239, 239, 239);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   padding-left: 10%;
   margin-top: 50%;
@@ -673,3 +688,147 @@ i.fa-solid.fa-user-plus:hover {
   }
 }
 /*FIN AJUSTES RESPONSIVE*/
+
+.elementor-widget-container {
+  display: flex;
+  justify-content: center;
+  background-image: url(/assets/img/adoptar2024.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 400px;
+  width: 70%;
+  height: 370px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Adopciona {
+  background-color: #cacaca;
+}
+
+.row {
+  background-color: #e7e7e7;
+}
+
+/*AJUSTES IMAGENES*/
+
+.galeria {
+  font-family: "open sans";
+  background-color: #cacaca;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.galeria h1 {
+  text-align: center;
+  font-family: BarlowCondensed-Regular;
+  font-weight: 300;
+  font-size: 300%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.linea {
+  border-top: 5px solid #288ece;
+  margin-bottom: 40px;
+}
+
+.linea1 {
+  border-top: 5px solid #288ece;
+  margin-bottom: 10px;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+.contenedor-imagenes .imagen {
+  width: 32%;
+  position: relative;
+  height: 250px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.imagen {
+  background-image: url(/assets/img/adoptado1.png);
+  background-size: 110% 100%;
+}
+#imagen1 {
+  background-image: url(/assets/img/adoptado2.png);
+  background-size: 110% 100%;
+}
+#imagen2 {
+  background-image: url(/assets/img/adoptado3.png);
+  background-size: 110% 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 149, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 149, 255, 0.537) 4%,
+    rgba(2, 0, 36, 0) 100%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+  height: 0%;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagen1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay h5 {
+  color: rgb(254, 254, 254);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight: 300;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  margin-top: 80px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#descripcion {
+  background-color: rgb(11, 5, 69);
+  color: rgb(249, 249, 249);
+  font-weight: 300;
+  font-size: 15px;
+  position: absolute;
+  margin-top: 110px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.imagen:hover .overlay {
+  height: 100%;
+  cursor: pointer;
+}

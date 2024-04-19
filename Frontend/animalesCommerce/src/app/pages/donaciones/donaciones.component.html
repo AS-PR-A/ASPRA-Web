@@ -1,17 +1,58 @@
-<div class="container d-flex flex-column justify-content-center align-items-center g-5 p-5">
-    <h1 class="p-2">Donaciones</h1>
-    <h4 class="p-2">¿Quieres apoyarnos y aparecer en la lista?</h4>
-    <div class="d-grid gap-2 d-md-block p-2">
-        <button class="btn btn-primary" style="background-color: #023B48;" type="button">Donar</button>
-    </div>
+<div class="imagenPortada">
+  <img src="/assets/img/portada.jpg">
+  <div class="texto">DONACIONES</div>
 </div>
-<div class="container d-flex flex-column justify-content-center align-items-center">
-    <h1 style="color: #023B48;">Donadores</h1>
+<div class="inicio">Los aportes económicos son importantes para pagar tratamientos, estudios médicos y honorarios
+  veterinarios, comprar
+  insumos y alimento, financiar campañas de castración en zonas carenciadas, imprimir material de difusión entre otros.
+</div>
+<div class="padre-2">
+  <div class="sidebar">
+    <div class="contenedor">
+      <h1 class="titulo">TRANSFERENCIA BANCARIA</h1>
+      <br>
+      <h6 class="subTitulo">Doná el importe que quieras directamente en nuestra cuenta.</h6>
+      <div class="elementor-divider">
+        <span class="elementor-divider-separator">
+        </span>
+      </div>
+      <h6 class="cuenta"><strong>Banco de la Provincia de Córdoba</strong></h6>
+      <h6 class="cuenta"><strong>Alias: </strong>ASPRA.PROTEC.ANIMAL</h6>
+      <h6 class="cuenta"><strong>CBU: </strong>0140059501500205063770</h6>
+      <h6 class="cuenta">ASPRA - Asociación Protectora de Animales</h6>
+      <h6 class="cuenta">Cuenta Corriente en pesos Nº 50555/8</h6>
+      <h6 class="cuenta">CUIT: 20-70090654-3</h6>
+    </div>
+  </div>
+  <div class="contenido">
+    <div class="contenedor2">
+      <img src="/assets/img/mercadopago.png">
+      <h6 class="subTitulo1">ALIAS: ASPRA.ANIMAL.MP</h6>
+      <div class="elementor-divider">
+        <span class="elementor-divider-separator">
+        </span>
+      </div>
+      <button class="btonAdoptar">
+        Elije el monto de tu donación
+      </button>
+    </div>
+  </div>
+</div>
 
-    <table>
-            <tr>Donador <p>{{datos[0].nombre}}</p></tr>
-            <tr>Monto <p>{{datos[0].monto}}</p></tr>
-    </table>
+<div class="amigos">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <h1 class="titulo">Amigos Donadores</h1>
+    <h4 class="subTitulo2">Ellos son las personas que se sumaron para sumar
+    </h4>
+    <div class="Icons">
 
-
+      {{datos[0].celular}}
+      <p>Celular: {{datos[0].monto}}</p>
+      <p>Lorem ipsum dolor sit amet consectetuz adipisicing elit. Officiis asperiores architecto earum, ea nobis
+        recusandae unde harum minus possimus fuga, placeat quaerat voluptatibus, eos porro iure itaque consequatur
+        fugiat sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint accusamus, consequuntur et quia
+        praesentium, nulla asperiores molestiae commodi veniam similique ad quos magni dignissimos porro aspernatur?
+        Ratione iure omnis vero?</p>
+    </div>
+  </div>
 </div>

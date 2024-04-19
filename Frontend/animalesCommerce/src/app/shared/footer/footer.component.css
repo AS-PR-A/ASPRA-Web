@@ -7,7 +7,7 @@ body {
 .body-special {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: 2n;
 }
 
 /*Ajustes Botones*/
@@ -457,7 +457,7 @@ body {
 
 footer {
   width: 100%;
-  background-color: #006075;
+  background-color: #33b2cf;
 }
 
 .footer {
@@ -478,22 +478,27 @@ footer {
 
 .colum1 h1 {
   font-size: 22px;
+  font-family: MartianMono;
   text-align: center;
 }
 
 .colum1 p {
-  font-size: 14px;
+  font-size: 16px;
   color: rgb(245, 241, 241);
   margin-top: 20px;
   text-align: center;
+  font-family: Comfortaa-VariableFont_wght;
 }
 
 .colum2 {
   max-width: 400px;
+  font-family: MartianMono;
 }
 
 .colum2 h1 {
   font-size: 22px;
+  font-family: MartianMono;
+  text-align: center;
 }
 
 .redesIcons {
@@ -508,29 +513,48 @@ i.fa-brands.fa-facebook.fa-2xl {
   cursor: pointer;
 }
 i.fa-brands.fa-facebook.fa-2xl:hover {
-  color: rgb(39, 106, 230);
+  color: rgb(0, 53, 244);
 }
 i.fa-brands.fa-instagram.fa-2xl {
   color: black;
   cursor: pointer;
 }
 i.fa-brands.fa-instagram.fa-2xl:hover {
-  color: rgb(225, 0, 255);
+  color: rgb(206, 3, 232);
 }
 i.fa-brands.fa-whatsapp.fa-2xl {
   color: black;
   cursor: pointer;
 }
 i.fa-brands.fa-whatsapp.fa-2xl:hover {
-  color: rgb(0, 200, 20);
+  color: rgb(2, 146, 16);
+}
+i.fa-brands.fa-youtube.fa-2xl {
+  color: black;
+  cursor: pointer;
+}
+i.fa-brands.fa-youtube.fa-2xl:hover {
+  color: rgb(241, 0, 0);
+}
+
+.colum3 a {
+  font-size: 16px;
+  color: rgb(245, 241, 241);
+  margin-top: 10px;
+  text-align: center;
+  font-family: Comfortaa-VariableFont_wght;
 }
 
 .colum3 {
   max-width: 400px;
+  text-align: center;
 }
 
 .colum3 h1 {
   font-size: 22px;
+  text-align: center;
+
+  font-family: MartianMono;
 }
 
 .row2 {
@@ -558,6 +582,11 @@ i.fa-brands.fa-whatsapp.fa-2xl:hover {
 
 .copyright {
   color: #c7c7c7;
+  font-size: smaller;
+  font-family: MartianMono;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 300px;
 }
 
 /*Fin Ajustes Footer*/
@@ -670,6 +699,11 @@ i.fa-solid.fa-user-plus:hover {
   .contact h3 {
     font-size: 300%;
     margin-left: -20%;
+  }
+
+  .lineaFooter {
+    display: flex;
+    font-size: 10px;
   }
 }
 /*FIN AJUSTES RESPONSIVE*/

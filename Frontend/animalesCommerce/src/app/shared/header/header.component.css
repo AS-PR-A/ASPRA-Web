@@ -265,25 +265,27 @@ body {
 
 .bton3 {
   display: inline-block;
-  font-size: 100%;
-  background-color: rgb(160, 231, 225);
-  color: rgb(56, 56, 56);
-  border: solid 2px;
-  border-color: darkslategrey;
-  border-radius: 30px;
+  font-size: 86%;
+  background-color: rgb(11, 5, 69);
+  font-family: MartianMono-VariableFont;
+  color: rgb(255, 255, 255);
+  border: solid 1px;
+  border-color: rgb(11, 5, 69);
+  border-radius: 38px;
   padding: 1%;
-  left: 13%;
-  margin-top: 10%;
+  left: 570%;
   position: relative;
+  margin-top: 1%;
   text-align: center;
-  width: 36%;
+  width: 700%;
   min-height: 40px;
   height: 50%;
   cursor: pointer;
 }
 
 .bton3:hover {
-  background-color: #006075;
+  background-color: rgb(22, 10, 129);
+  border-color: rgb(22, 10, 129);
   color: rgb(252, 252, 252);
 }
 
@@ -377,6 +379,10 @@ body {
   padding: 2%;
 }
 
+.dropdown-item {
+  color: #ffffff;
+}
+
 #imgestandar {
   border: 1px solid;
   border-color: rgb(10, 89, 126);
@@ -417,7 +423,7 @@ body {
 /*Ajustes NavBar*/
 
 .login {
-  margin-left: 135%;
+  margin-left: 71%;
   margin-right: 0;
 }
 
@@ -425,31 +431,39 @@ body {
 
 /*Ajustes Menu Desplegable*/
 #pruebamenu {
-  background-color: rgb(160, 231, 225);
+  background-color: #33b2cf;
+  color: #ffffff;
   margin-left: 430%;
 }
 
 #pruebamenu a:hover {
-  color: #ffffff;
   background-color: #006075;
 }
 
 #estiloMenu {
-  background-color: rgb(160, 231, 225);
+  background-color: #33b2cf;
+  font-family: MartianMono;
+  font-size: 86%;
+  position: 1px;
+  border: 0px;
 }
+
 #estiloMenu a:hover {
-  color: #ffffff;
-  background-color: #006075;
+  background: linear-gradient(#33b2cf, rgb(11, 5, 69));
 }
 
 #estiloIcon {
-  background-color: rgb(160, 231, 225);
+  background-color: #fbfbfba6;
+  background-color: #33b2cf;
+  font-family: MartianMono-VariableFont;
+  font-size: 86%;
+  position: 1px;
+  border: 0px;
   margin-top: -2%;
   margin-left: 85%;
 }
 #estiloIcon a:hover {
-  color: #cacaca;
-  background-color: #006075;
+  background: linear-gradient(#33b2cf, rgb(11, 5, 69));
 }
 /* Fin Ajustes Menu Desplegable*/
 
@@ -482,10 +496,11 @@ footer {
 }
 
 .colum1 p {
-  font-size: 14px;
+  font-size: 25px;
   color: rgb(245, 241, 241);
   margin-top: 20px;
   text-align: center;
+  font-family: MartianMono;
 }
 
 .colum2 {
@@ -573,19 +588,30 @@ i.fa-brands.fa-whatsapp.fa-2xl:hover {
   color: rgb(255, 255, 255);
 }
 
-i.fa-solid.fa-user-plus {
-  color: rgb(239, 239, 239);
+i.fa-solid.fa-user.fa-2xl {
+  color: rgb(249, 247, 247);
   cursor: pointer;
-  padding-left: 10%;
-  margin-top: 50%;
+  margin-top: 18px;
 }
 
-i.fa-solid.fa-user-plus:hover {
-  color: rgb(160, 231, 225);
+i.fa-solid.fa-user.fa-2xl:hover {
+  color: rgba(11, 5, 69, 0.911);
 }
 
 .nav-link.dropdown-toggle::after {
   content: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(240, 240, 240);
+  font-family: MartianMono-VariableFont;
+  font-size: 86%;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background: linear-gradient(rgba(11, 5, 69, 0.911), #33b2cf);
 }
 
 .colum3 a {
