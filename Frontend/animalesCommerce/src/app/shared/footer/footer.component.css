@@ -712,8 +712,8 @@ i.fa-solid.fa-user-plus:hover {
 
 .go-top-container {
   position: fixed;
-  bottom: 2rem;
-  right: 1rem;
+  bottom: 3rem;
+  right: 0rem;
   width: 6.6rem;
   height: 6.6rem;
   z-index: -1;
@@ -722,10 +722,11 @@ i.fa-solid.fa-user-plus:hover {
 .go-top-button {
   width: 3rem;
   height: 3rem;
-  background: #0179fa76;
+  background-color: rgba(11, 5, 69, 0.636);
   border-radius: 50%;
+  border-color: #ffffff7c;
+  border-style: groove;
   cursor: pointer;
-  transition: 0.4s;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -738,25 +739,25 @@ i.fa-solid.fa-user-plus:hover {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  color: #fff;
+  color: #ffffffd8;
   transition: 0.2s;
 }
 .show {
-  z-index: 10;
+  z-index: 11;
 }
 
 .show .go-to-bbutton {
   animation: popup 0.3s ease-in-out;
   width: 6.6rem;
   height: 6.6rem;
-  z-index: 11;
+  z-index: 9;
 }
 
 .show i {
   transform: translate(-50%, -50%) scale(1);
 }
 
-@keyframes popus {
+@keyframes popup {
   0% {
     width: 0rem;
     height: 0rem;
