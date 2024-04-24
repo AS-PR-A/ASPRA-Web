@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Mi Equipo\Documents\ASPRA-Web\Backend\django"
+VIRTUAL_ENV="C:\Users\Mi Equipo\Desktop\Proyecto_FullStack_ISPC\Backend\django"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

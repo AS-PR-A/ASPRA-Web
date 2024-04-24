@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Mi Equipo\Documents\ASPRA-Web\Backend\django
+set VIRTUAL_ENV=C:\Users\Mi Equipo\Desktop\Proyecto_FullStack_ISPC\Backend\django
 
 if not defined PROMPT set PROMPT=$P$G
 

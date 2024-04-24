@@ -1,16 +1,21 @@
-<main>
-  <h1>Veterinarios</h1>
-  <div class="tarjeta" *ngFor="let elemento of lista">
-    <div class="imagen"></div>
-    <div>
-      <p><b>Nombre:</b> {{elemento.nombre}}</p>
-      <p><b>Email:</b> {{elemento.email}}</p>
-      <p><b>Telefono:</b> {{elemento.telefono}}</p>
-    </div>
+<div class="container2">
+  <div class="box2">
+    <img src="/assets/img/img8.jpeg" alt="">
   </div>
-</main>
+</div>
+
+<div class="textoVeterinarios">
+  <p>Los veterinarios se encargan de diagnosticar enfermedades, ofrecer tratamientos y realizar intervenciones médicas a
+    los animales, tratando siempre de preservar su salud. Además, también está entre sus funciones orientar y aconsejar
+    a los propietarios de las mascotas sobre el cuidado de los mismos.</p><br>
+  <p>
+    Conocé a los especialiastas que nos acompañan en ASPRA
+  </p>
+</div>
+
 
 <div class="container">
+
   <div class="box">
     <img src="/assets/img/img1.jpg" alt="">
   </div>
@@ -32,4 +37,41 @@
   <div class="box">
     <img src="/assets/img/img7.jpg" alt="">
   </div>
-</div>
+
+
+
+
+  <h1>Ponete en contacto con ellos:</h1>
+  <div class="tarjeta" *ngFor="let elemento of lista">
+    <p><b>Nombre:</b> {{elemento.nombre}}</p>
+    <p><b>Telefono:</b> {{elemento.telefono}}</p>
+    <p><b>Email:</b> {{elemento.email}}</p>
+  </div>
+
+  <ng-container *ngFor="let e of lista;">
+    <p><b>Nombre:</b> {{e.nombre}}</p>
+  </ng-container>
+
+  <div class="datos">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quaerat quibusdam exercitationem sed, eos sint
+      molestiae maiores repellendus ipsum accusantium id dolorum, doloribus eaque adipisci aliquam quae voluptatibus!
+      Nesciunt, veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur ipsa iste quod
+      harum
+      itaque sunt a repellat temporibus. Nisi maxime deleniti vero ab dignissimos fugiat doloribus minima, laudantium
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex praesentium cumque dolorem, molestiae esse cum earum
+      numquam? Enim facilis totam molestias ducimus atque accusantium voluptates dolorem? Suscipit nesciunt maxime
+      etLorem
+      ipsum dolor sit amet consectetur adipisicing elit. Ipsam quaerat quibusdam exercitationem sed, eos sint
+      molestiae maiores repellendus ipsum accusantium id dolorum, doloribus eaque adipisci aliquam quae voluptatibus!
+      Nesciunt, veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur ipsa iste quod
+      harum
+      itaque sunt a repellat temporibus. Nisi maxime deleniti vero ab dignissimos fugiat doloribus minima, laudantium
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex praesentium cumque dolorem, molestiae esse cum earum
+      numquam? Enim facilis totam molestias ducimus atque accusantium voluptates dolorem? Suscipit nesciunt maxime et..
+    </p>
+
+
+    <p><b>Nombre:</b> {{lista.nombre}}</p>
+
+
+  </div>

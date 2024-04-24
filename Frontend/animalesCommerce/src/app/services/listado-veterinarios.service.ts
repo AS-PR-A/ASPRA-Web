@@ -3,15 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ListadoVeterinariosService {
+  constructor(private http: HttpClient) {}
 
-  url:string = "http://localhost:3000/"
-  
-  constructor(private http:HttpClient) { }
-
-  verVeterinarios():Observable<any>{
-    return this.http.get<any>(this.url + "veterinarios")}
-
+  getListadoVeterinarios(): Observable<any> {
+    return this.http.get('http://127.0.0.1:8000/api/pages/veterinarios/');
+  }
 }

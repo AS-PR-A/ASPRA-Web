@@ -11,6 +11,7 @@ import { ContactoService } from 'src/app/services/contacto.service';
 export class ContactoComponent {
   forma!: FormGroup;
   datos: any;
+  elemento: any;
 
   constructor(
     private formbuilder: FormBuilder,

@@ -59,6 +59,7 @@ class Donacion(models.Model):
     id = models.AutoField(primary_key=True)
     monto = models.PositiveIntegerField()
     Usuario = models.ForeignKey("CustomUser", to_field="id", on_delete=models.CASCADE)
+   
 
     class Meta:
         db_table = "Donacion"
