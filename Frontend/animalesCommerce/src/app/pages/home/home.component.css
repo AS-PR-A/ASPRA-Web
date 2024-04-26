@@ -832,3 +832,98 @@ i.fa-solid.fa-user-plus:hover {
   height: 100%;
   cursor: pointer;
 }
+
+/*ESTILO BOTON APP MOVIL*/
+
+.container-bar {
+  width: 100%;
+  max-width: 55px;
+  position: fixed;
+  left: 0;
+  top: 25%;
+}
+
+.container-bar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 40px;
+  position: relative;
+  transition: all 500ms ease;
+}
+
+.container-bar a:hover {
+  background: #1c1c1c;
+}
+
+.fa-brands.fa-android {
+  color: #cacaca;
+}
+
+.container-bar .fa-brands.fa-android {
+  background: rgba(11, 5, 69, 0.934);
+  border-radius: 0px 25px 25px 0px;
+  height: 70px;
+  width: 80px;
+  margin-top: -5px;
+}
+
+.container-bar #title {
+  position: fixed;
+  background: #1c1c1cf4;
+  padding: 6px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-top: -20px;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  width: 240px;
+  font-family: MartianMono;
+  text-align: center;
+}
+
+.container-bar a:hover #title {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 30px;
+}
+
+.container-bar #title:after {
+  position: absolute;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 6px solid #3f3f3f;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  right: 100%;
+  top: 8px;
+}
+
+#btn-social {
+  display: none;
+}
+
+.fa-solid.fa-play {
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 20px;
+  display: inline-block;
+  color: rgba(11, 5, 69, 0.934);
+  transform: rotate(180deg);
+  margin-top: 200px;
+}
+
+#btn-social:checked ~ .fa-solid.fa-play {
+  transform: rotate(0deg);
+}
+
+.icon-social {
+  transition: all 0.4s;
+  transform: translateX(0%);
+  width: 80px;
+}
+
+#btn-social:checked ~ .icon-social {
+  transform: translate(-100%);
+}
