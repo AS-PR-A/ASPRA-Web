@@ -1,67 +1,84 @@
+![DWAD](https://github.com/JDGA1997/ASPRA-Movil/assets/105946879/4bd8b57c-8cb3-4d67-92a8-bc83ac8733f4)
+<br></br>
 
+<div align="center">
 
-<br />
+# 🐾 ASPRA WEB 🐾
+![imagen](https://github.com/JDGA1997/ASPRA-Movil/assets/105946879/e1aedf58-d0d0-49da-8b61-d08e8a653fb6)
 
-<header align="center">
-  
-  <h1 align="center">Web de Animales</h1>
-  
-  <p align="center"></p>
- 
-</header>
+<br>
 
 <br />
  
-<section id="about-the-project">
-  <h2>Funcionalidades del sitio web</h2>
+## Funcionalidades del sitio web
 
-<article>
+Login
 
-  <ol>
-    <li>Login<l/i >
-    <li>Reportar animal perdido/maltratado</li>
-    <li>Adoptar animal</li>
-    <li>Segumiento de animales</li>
-    <li>Contacto con veterinarios</li>
-    <li>Donaciones</li>
-  </ol>
+Reportar animal perdido/maltratado
 
+Adoptar animal
+
+Seguimiento de animales
+
+Contacto con veterinarios
+
+Donaciones
+
+<br>
+
+## Integrantes  👩‍💻👨🏼‍💻
+
+| Nombre          | Apellido            | GitHub                                                | Comision |    Rol Scrum    |
+|-----------------|---------------------|-------------------------------------------------------|----------|-----------------|
+| Juan Diego      | González Antoniazzi | [JDGA1997](https://github.com/JDGA1997)               |   2      |  Scrum Master   |
+| Axel Ezequiel   | Montivero           | [Ezmant](https://github.com/Ezmant)                   |   2      |        |
+| Fabiana Jazmin  |  Amato              | [AmatoJazmin](https://github.com/AmatoJazmin)         |   1      |        |
+| Nicolás         | Mattos              | [NicolasMattos03](https://github.com/NicolasMattos03) |   2      |        |
+| Melanie         | Reyes               | [MelanieR24](https://github.com/MelanieR24)           |   3      |        |
+| Alejandro       |     Moreno          | [MoCAlejandro](https://github.com/MoCAlejandro)       |   2      |        |
   
 
-</article>
-  
-<br />
-  
-<article>
-  
-  <h3>Tecnologías utilizadas</h3>
-  
-  - HTML5
-  - CSS3 - Bootstrap
-  - JavaScript 
-  - Angular
-  - MySQL
-  - Python
-  - Django
-  
-</article>
-  
-<br />
-
-</section>
 
 
 
-<section id="acknowledgments">
-  <h2>Contribuidores</h2>
-  
-  - [Melanie Reyes] --> (https://github.com/MelanieR24)
-  - [Juan Ezequiel Gomez] --> (https://github.com/JuanEzequielGomez)
-  - [Fabiana Jazmin Amato]  --> (https://github.com/AmatoJazmin)
-  - [Axel Ezequiel Montivero]  --> (https://github.com/Ezmant)
-  - [Nicolas Mattos ]  --> (https://github.com/NicolasMattos03)
-  - [Alejandro Moreno]  --> (https://github.com/MoCAlejandro)
- 
+<br>
 
+### Front-End ⚛️
 
-</section>
+HTML5
+
+CSS3
+
+Javascript
+
+Bootstrap
+
+Angular
+
+### Back-End 💻
+Python para arquitectura MVC y POO.
+
+Django
+
+Typescript
+
+### Base de Datos 📚
+MySQL
+
+<br>
+
+## Más de ASPRA
+
+### [Documento IEEE830](https://docs.google.com/document/d/1yoGYpTMU1NPqZDSuM2iEQeQGeHVx1eCX/edit?usp=sharing&ouid=103416615054896105402&rtpof=true&sd=true)
+
+### [Wiki](https://github.com/AS-PR-A/ASPRA/wiki)
+
+### [Tablero Kanban](https://github.com/orgs/AS-PR-A/projects/8/views/1)
+
+### [Milestones](https://github.com/AS-PR-A/ASPRA-Web/milestones)
+
+### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues)
+
+### [Sprint 1](https://github.com/AS-PR-A/ASPRA-Web/milestone/1)
+
+</div>
