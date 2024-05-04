@@ -14,7 +14,7 @@
 4. Inicia el servidor de desarrollo y abre la aplicación en el navegador con el siguiente comando:
    ```
    ng serve -o
-
+   ```
 
 **Nota:** Los componentes "Refugios" y "Veterinarios" obtienen los datos desde Angular utilizando el archivo `db.json`.
 
