@@ -12,17 +12,17 @@
  
 ## Funcionalidades del sitio web
 
+Registro
+
 Login
 
 Reportar animal perdido/maltratado
-
-Adoptar animal
 
 Seguimiento de animales
 
 Contacto con veterinarios
 
-Donaciones
+Donaciones a traves de Mercado Pago
 
 <br>
 
@@ -71,7 +71,7 @@ MySQL
 
 ### [Documento IEEE830](https://docs.google.com/document/d/1yoGYpTMU1NPqZDSuM2iEQeQGeHVx1eCX/edit?usp=sharing&ouid=103416615054896105402&rtpof=true&sd=true)
 
-### [Wiki](https://github.com/AS-PR-A/ASPRA/wiki)
+### [Wiki](https://github.com/AS-PR-A/ASPRA-Web/wiki)
 
 ### [Tablero Kanban](https://github.com/orgs/AS-PR-A/projects/8/views/1)
 
