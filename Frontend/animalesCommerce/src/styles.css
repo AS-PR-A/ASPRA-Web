@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "MartianMono";
+  src: url("./assets/fonts/MartianMono-VariableFont.ttf");
+}
+
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("./assets/fonts/BarlowCondensed-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "BarlowCondensed-Regular";
+  src: url("./assets/fonts/BarlowCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BarlowCondensed-Thin";
+  src: url("./assets/fonts/BarlowCondensed-Thin.ttf");
+}
+
+@font-face {
+  font-family: "BarlowCondensed-Bold";
+  src: url("./assets/fonts/BarlowCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "MartianMono-VariableFont";
+  src: url("./assets/fonts/MartianMono-VariableFont.ttf");
+}
+
+@font-face {
+  font-family: "MartianMono-Light";
+  src: url("./assets/fonts/MartianMono-Light.ttf");
+}
+
+@font-face {
+  font-family: "Comfortaa-VariableFont_wght";
+  src: url("./assets/fonts/Comfortaa-VariableFont_wght.ttf");
+}
