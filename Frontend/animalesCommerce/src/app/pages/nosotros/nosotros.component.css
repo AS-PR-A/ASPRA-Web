@@ -56,7 +56,7 @@ i.fa-solid.fa-user-plus:hover {
 
 .bodyNosotros {
   padding: 3%;
-  background-color: #006075be;
+  background-color: #47b3cb;
 }
 
 .bodyNosotros h4 {
@@ -72,9 +72,15 @@ i.fa-solid.fa-user-plus:hover {
 }
 
 .nosotros {
-  background-color: #a6a6a6be;
+  background-color: #cacaca;
 }
 
+.inicioNosotros {
+  padding-top: 30px;
+}
+.finNosotros {
+  padding-bottom: 30px;
+}
 /*AJUSTES RESPONSIVE*/
 @media screen and (max-width: 600px) {
   img {
