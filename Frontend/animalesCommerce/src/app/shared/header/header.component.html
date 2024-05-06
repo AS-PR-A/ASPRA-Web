@@ -1,64 +1,112 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#006075;">
-    <img src="assets/img/ASPRA.png" width="20%" alt="...">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark"
+    style="background-color: #33b2cf"
+  >
+    <img src="assets/img/ASPRA.png" width="20%" alt="..." />
     <a class="navbar-brand" href="/index.html"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      _ngcontent-rhk-c1=""
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+    >
+      <span _ngcontent-rhk-c1="" class="navbar-toggler-icon"></span>
     </button>
-
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="">HOME<span class="sr-only"></span></a>
+          <a class="nav-link" routerLink=""
+            >INICIO<span class="sr-only"></span
+          ></a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             SERVICIOS
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="estiloMenu">
-            <a class="dropdown-item" routerLink="/listaAdopcion">Adoptar</a>
-            <a class="dropdown-item" routerLink="/reportar">Reportar Animal</a>
+          <div
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdown"
+            id="estiloMenu"
+          >
+            <a class="dropdown-item" routerLink="/listaAdopcion"
+              >QUIERO ADOPTAR</a
+            >
+            <a class="dropdown-item" routerLink="/reportar">REPORTAR ANIMAL</a>
             <!-- <a class="dropdown-item" href="./pages/Seguimiento de animales.html">Seguimiento de animales</a> -->
             <!-- <div class="dropdown-divider"></div> -->
 
-            <a class="dropdown-item" routerLink="/veterinarios">Veterinarios</a>
-            <a class="dropdown-item" routerLink="/refugios">Refugios</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            DONACIONES
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="estiloMenu">
-            <!-- <a class="dropdown-item" href="./pages/metodoPago.html">Donar
-            </a> -->
-            <a class="dropdown-item" routerLink="/donaciones">Donaciones</a>
+            <a class="dropdown-item" routerLink="/veterinarios">VETERINARIOS</a>
+            <a class="dropdown-item" routerLink="/refugios">REFUGIOS AMIGOS</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contacto">CONTACTO<span class="sr-only"></span></a>
+          <a class="nav-link" routerLink="/contacto"
+            >CONTACTO<span class="sr-only"></span
+          ></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/nosotros">NOSOTROS<span class="sr-only"></span></a>
+          <a class="nav-link" routerLink="/nosotros"
+            >NOSOTROS<span class="sr-only"></span
+          ></a>
         </li>
+
+        <a class="nav-market" routerLink="/cart"
+          ><i class="fa-solid fa-store fa-2xl" title="IR A TIENDA"></i
+          ><span class="sr-only"></span
+        ></a>
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">CARRITO<span class="sr-only"></span></a>
+          <div class="botonHeader">
+            <a routerLink="/donaciones">
+              <button class="bton3">DONÁ AHORA</button>
+            </a>
+          </div>
         </li>
 
         <section class="login">
           <div class="IconsAccount">
-            <li class="nav-item dropdown-left"><i class="fa-solid fa-user-plus fa-2xl" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <p class="sesion">Sign in</p>
+            <li class="nav-item dropdown-left">
+              <i
+                class="fa-solid fa-user fa-2xl"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <p class="sesion"></p>
               </i>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="estiloIcon">
-                <li><a class="dropdown-item" routerLink="/loguearse">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" routerLink="/registrarse">Crear Cuenta</a></li>
-                <li><a class="dropdown-item" routerLink="/miCuenta">Mi cuenta</a></li>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuLink"
+                id="estiloIcon"
+              >
+                <li>
+                  <a class="dropdown-item" routerLink="/loguearse"
+                    >INICIAR SESION</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/registrarse"
+                    >CREAR CUENTA</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/miCuenta">MI CUENTA</a>
+                </li>
               </ul>
             </li>
           </div>
