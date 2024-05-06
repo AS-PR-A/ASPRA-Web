@@ -1,65 +1,109 @@
+<div class="container2">
+  <div class="box2">
+    <img src="/assets/img/contactoportada1.png" alt="" />
+  </div>
+</div>
+
 <main>
   <section class="contact">
     <div class="container text-center">
       <div class="row">
         <div class="col">
           <div class="maps">
-            <p><b>ASPRA - Proteccion Animal - Cordoba - Argentina</b></p>
+            <p><b>ASPRA - Donde nos encontramos?</b></p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.223327076787!2d-64.22034339999999!3d-31.407972499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432993b7871e065%3A0xce47de2940cea545!2sASPRA%20-%20Protecci%C3%B3n%20Animal!5e0!3m2!1ses-419!2sar!4v1682452696519!5m2!1ses-419!2sar"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe><br />
+              width="600"
+              height="450"
+              style="border: 2"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe
+            ><br />
           </div>
         </div>
 
         <div class="col">
           <div class="contact-clean">
             <form [formGroup]="forma" (ngSubmit)="enviar()">
+              <h2 class="text-center">ENVIENOS UN MENSAJE</h2>
 
-              <h2 class="text-center">Contactanos</h2>
-              <div class="form-group"><input class="form-control" type="text" formControlName="nombre"
-                  [class.is-invalid]="nombreNoValido" placeholder="Nombre" id="name">
-                <small *ngIf="nombreNoValido" class="text-danger">Ingrese el nombre con el minimo de 5 letras</small>
+              <h5 class="text-center">
+                Para contactarse con nosotros complete el siguiente formulario y
+                seleccione enviar mensaje. Muchas gracias.
+              </h5>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="nombre"
+                  [class.is-invalid]="nombreNoValido"
+                  placeholder="Nombre"
+                  id="name"
+                />
+                <small *ngIf="nombreNoValido" class="text-danger"
+                  >Ingrese el nombre con el minimo de 5 letras</small
+                >
               </div>
-              <div class="form-group"><input class="form-control" type="email" formControlName="email"
-                  placeholder="Email" id="email"><small *ngIf="emailNoValido" class="text-danger">Ingrese un E-mail
-                  valido</small>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="email"
+                  formControlName="email"
+                  placeholder="Email"
+                  id="email"
+                /><small *ngIf="emailNoValido" class="text-danger"
+                  >Ingrese un E-mail valido</small
+                >
               </div>
-              <div class="form-group"><textarea class="form-control" rows="14" formControlName="texto"
-                  placeholder="Deje su mensaje" id="message"></textarea><small *ngIf="textoNoValido"
-                  class="text-danger">Ingrese su mensaje
-                  con un minimo de 15
-                  caracteres</small></div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  rows="14"
+                  formControlName="texto"
+                  placeholder="Deje su mensaje"
+                  id="message"
+                ></textarea
+                ><small *ngIf="textoNoValido" class="text-danger"
+                  >Ingrese su mensaje con un minimo de 15 caracteres</small
+                >
+              </div>
 
-
-              <div class="form-group"><button class="btn btn-primary" type="submit">Enviar </button></div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                  Enviar Mensaje
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="inicioContact">
+      <p class="inicioContacto">
+        Otras formas de contactarnos y más información
+      </p>
+    </div>
 
     <div class="Icons">
       <i class="fa-solid fa-clock"></i>
-      <p> Horario: {{datos[0].horario}}</p>
+      <p><b>Horario: </b>{{ datos[0].horario }}</p>
     </div>
-
 
     <div class="Icons">
       <i class="fa-solid fa-phone"></i>
-      <p> Celular: {{datos[0].celular}}</p>
+      <p><b>Celular: </b>{{ datos[0].celular }}</p>
     </div>
 
     <div class="Icons">
       <i class="fa-solid fa-envelope"></i>
-      <p>E-mail: {{datos[0].email}}</p>
+      <p><b>E-mail: </b>{{ datos[0].email }}</p>
     </div>
 
     <div class="Icons">
       <i class="fa-solid fa-book"></i>
-      <p>Somos una organización sin fines de lucro</p>
+      <p><b>Somos una organización sin fines de lucro</b></p>
     </div>
-
   </section>
 </main>
