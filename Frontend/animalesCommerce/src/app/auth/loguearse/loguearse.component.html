@@ -14,13 +14,13 @@
             <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" formControlName="password">
             <div *ngIf="password?.errors && password?.touched">
                 <p *ngIf="password?.hasError('required')" class="text-danger">La contraseña es requerida</p>
-                <p *ngIf="password?.errors?.['minlength']" class="text-danger">Ingrese una contraseña con un minimo de 8 caracteres</p>
+                <p *ngIf="password?.errors?.['minlength']" class="text-danger">Ingrese una contraseña con un mínimo de 8 caracteres</p>
             </div> 
         </div>
         <div class="enviar">
             <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
-            <span>¿No tenes una cuenta?
-            <a href="#" class="registro">Registrate</a></span>
+            <span>¿No tienes una cuenta?
+            <a href="/registrarse" class="registro">Registrate</a></span>
         </div>
     </form>
 </main>
