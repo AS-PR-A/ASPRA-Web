@@ -6,16 +6,17 @@
       "email": "aspraproteccionanimal@gmail.com"
     }
   ],
-  
-  "donaciones": [
-    {"nombre": "Martin Guzmán de La Fuente","monto":"100"},
-    {"nombre": "Griselda Guzman","monto":"1000"},
-    {"nombre": "Rocio Delvalle","monto":"500"},
-    {"nombre": "Oscar David Rios","monto":"80"},
-    {"nombre": "Celeste Reyna","monto":"1300"},
-    {"nombre": "Abril Noemi Perez","monto":"800"},
-    {"nombre": "Raul Alejando Lopez","monto":"950"}
 
+  "donaciones": [
+    { "nombre": "Martin ", "apellido": "De La Fuente", "monto": "100" },
+    { "nombre": "Griselda ", "apellido": "Guzman", "monto": "1000" },
+    { "nombre": "Rocio ", "apellido": "Del Valle", "monto": "500" },
+    { "nombre": "David ", "apellido": "Rios", "monto": "80" },
+    { "nombre": "Celeste ", "apellido": "Reyna", "monto": "1300" },
+    { "nombre": "Noemi ", "apellido": "Perez", "monto": "800" },
+    { "nombre": "Raul ", "apellido": " Lopez", "monto": "950" },
+    { "nombre": "Dario ", "apellido": "Gonzales", "monto": "2000" },
+    { "nombre": "Maria ", "apellido": "Azcuenaga", "monto": "950" }
   ],
   "veterinarios": [
     {
@@ -42,6 +43,16 @@
       "nombre": "Juliana Santilla",
       "email": "JSantillan@gmail.com",
       "telefono": "1152565538"
+    },
+    {
+      "nombre": "Cynthia Moreno",
+      "email": "cynthiamoreno@gmail.com",
+      "telefono": "1152576543"
+    },
+    {
+      "nombre": "Julio Sosa",
+      "email": "JSosa@gmail.com",
+      "telefono": "1153534321"
     }
   ],
   "Refuguios": [

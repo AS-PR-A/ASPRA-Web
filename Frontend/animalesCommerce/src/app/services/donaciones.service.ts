@@ -6,14 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DonacionesService {
+  url: string = 'http://localhost:3000/';
+
   constructor(private http: HttpClient) {}
 
-  getDonaciones(): Observable<any> {
-    return this.http.get('http://localhost:3000/donaciones');
+  verDonaciones(): Observable<any> {
+    return this.http.get<any>(this.url + 'donaciones');
   }
-
- // getDonaciones(){
-   // this.http.get("http://localhost:3000/donaciones").subscribe((data)=>{
-     // console.log(data);
-    //});
-  }
+}
