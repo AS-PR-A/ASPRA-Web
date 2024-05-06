@@ -1,17 +1,83 @@
-<div class="container d-flex flex-column justify-content-center align-items-center g-5 p-5">
-    <h1 class="p-2">Donaciones</h1>
-    <h4 class="p-2">¿Quieres apoyarnos y aparecer en la lista?</h4>
-    <div class="d-grid gap-2 d-md-block p-2">
-        <button class="btn btn-primary" style="background-color: #023B48;" type="button">Donar</button>
+<div class="container2">
+  <div class="box2">
+    <img src="/assets/img/portada.jpg" alt="">
+    <div class="texto">DONACIONES</div>
+  </div>
+</div>
+
+<div class="inicio">Los aportes económicos son importantes para pagar tratamientos, estudios médicos y honorarios
+  veterinarios, comprar
+  insumos y alimento, financiar campañas de castración en zonas carenciadas, imprimir material de difusión entre otros.
+</div>
+
+<section class="nosotros">
+  <div class="containera text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="sidebar">
+          <div class="contenedor">
+            <h1 class="titulo">TRANSFERENCIA BANCARIA</h1>
+            <br>
+            <h6 class="subTitulo">Doná el importe que quieras directamente en nuestra cuenta.</h6>
+            <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+            </div>
+            <h6 class="cuenta"><strong>Banco de la Provincia de Córdoba</strong></h6>
+            <h6 class="cuenta"><strong>Alias: </strong>ASPRA.PROTEC.ANIMAL</h6>
+            <h6 class="cuenta"><strong>CBU: </strong>0140059501500205063770</h6>
+            <h6 class="cuenta">ASPRA - Asociación Protectora de Animales</h6>
+            <h6 class="cuenta">Cuenta Corriente en pesos Nº 50555/8</h6>
+            <h6 class="cuenta">CUIT: 20-70090654-3</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="contenido">
+          <div class="contenedor2">
+            <img src="/assets/img/mercadopago.png">
+            <h6 class="subTitulo1">ALIAS: ASPRA.ANIMAL.MP</h6>
+            <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+            </div>
+            <a href="https://link.mercadopago.com.ar/aspra" target="_blank">
+              <button class="btonDonar">
+                ELIJE EL MONTO DE
+                TU
+                DONACIÓN
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<div class="container d-flex flex-column justify-content-center align-items-center">
-    <h1 style="color: #023B48;">Donadores</h1>
-
-    <table>
-            <tr>Donador <p>{{datos[0].nombre}}</p></tr>
-            <tr>Monto <p>{{datos[0].monto}}</p></tr>
-    </table>
+  </div>
+</section>
 
 
-</div>
+
+<div class="amigos">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <h1 class="titulo">Amigos Donadores</h1>
+    <h4 class="subTitulo2">Ellos son las personas que se sumaron para sumar. Queres aparecer en nuestra lista?
+    </h4>
+    <h4 class="subTitulo2">Hacé tu
+      donación y automaticamente apareceras en nuestro listado de amigos donadores!
+    </h4>
+
+
+
+
+    <div class="container">
+
+      <div class="tarjeta" *ngFor="let elemento of lista">
+        <div class="imagen">
+          <div>
+            <p><b>El/La Señor/a</b> {{elemento.nombre}}{{elemento.apellido}}</p>
+            <p><b>Ha donado:</b> ${{elemento.monto}}</p>
+            <p>Muchas gracias por tu ayuda {{elemento.nombre}}!</p>
+          </div>
+        </div>
+      </div>
+    </div>
