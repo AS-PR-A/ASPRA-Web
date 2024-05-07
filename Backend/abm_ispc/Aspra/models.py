@@ -1,19 +1,4 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
-
-
-class CustomUser(AbstractUser):
-    email = models.EmailField(max_length=150, unique=True)
-    username = models.CharField(max_length=150, unique=False)
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["username", "password"]
-
-    def __unicode__(self):
-        return self.username
-
-    def __str__(self):
-        return self.username
-
 
 class Refugio(models.Model):
     id = models.AutoField(primary_key=True)
@@ -58,7 +43,7 @@ class Veterinario(models.Model):
 class Donacion(models.Model):
     id = models.AutoField(primary_key=True)
     monto = models.PositiveIntegerField()
-    Usuario = models.ForeignKey("CustomUser", to_field="id", on_delete=models.CASCADE)
+    Usuario = models.ForeignKey("Usuario", to_field="dni", on_delete=models.CASCADE)
 
     class Meta:
         db_table = "Donacion"
