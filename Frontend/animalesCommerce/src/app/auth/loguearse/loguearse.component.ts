@@ -13,13 +13,13 @@ export class LoguearseComponent {
 
   constructor(private formBuilder:FormBuilder, private login:LoginService) {
     this.form=this.formBuilder.group({
-      email:['',[Validators.required, Validators.email]],
+      username:['',Validators.required],
       password:['',[Validators.required, Validators.minLength(8)]]
     })
   }
 
-  get email(){
-    return this.form.get("email")
+  get username(){
+    return this.form.get("username")
   }
 
   get password(){
@@ -29,7 +29,6 @@ export class LoguearseComponent {
   onEnviar(event:Event){
     event.preventDefault();
     if (this.form.valid) {
-      console.log(this.form.value)
       this.login.login(this.form.value).subscribe({
         next: (response) => {
           if (response){

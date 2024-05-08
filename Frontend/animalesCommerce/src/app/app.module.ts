@@ -29,7 +29,7 @@ const appRoutes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'refugios', component: RefugiosComponent },
   { path: 'veterinarios', component: VeterinariosComponent },
-  { path: 'loguearse', component: LoguearseComponent },
+  { path: 'login', component: LoguearseComponent },
   { path: 'donaciones', component: DonacionesComponent },
   { path: 'reportar', component: ReportarComponent },
   { path: 'contacto', component: ContactoComponent },
