@@ -35,7 +35,7 @@ Donaciones a traves de Mercado Pago
 | Fabiana Jazmin  | Amato               | [AmatoJazmin](https://github.com/AmatoJazmin)         |   1      |   Developer     |
 | Nicolás         | Mattos              | [NicolasMattos03](https://github.com/NicolasMattos03) |   2      |   Developer     |
 | Melanie         | Reyes               | [MelanieR24](https://github.com/MelanieR24)           |   3      |        |
-| Alejandro       |     Moreno          | [MoCAlejandro](https://github.com/MoCAlejandro)       |   2      |        |
+| Alejandro       |     Moreno          | [MoCAlejandro](https://github.com/MoCAlejandro)       |   2      |   Developer     |
   
 
 
