@@ -34,7 +34,7 @@ Donaciones a traves de Mercado Pago
 | Axel Ezequiel   | Montivero           | [Ezmant](https://github.com/Ezmant)                   |   2      |        |
 | Fabiana Jazmin  | Amato               | [AmatoJazmin](https://github.com/AmatoJazmin)         |   1      |   Developer     |
 | Nicolás         | Mattos              | [NicolasMattos03](https://github.com/NicolasMattos03) |   2      |   Developer     |
-| Melanie         | Reyes               | [MelanieR24](https://github.com/MelanieR24)           |   3      |        |
+| Melanie         | Reyes               | [MelanieR24](https://github.com/MelanieR24)           |   3      |      Developer  |
 | Alejandro       |     Moreno          | [MoCAlejandro](https://github.com/MoCAlejandro)       |   2      |   Developer     |
   
 
