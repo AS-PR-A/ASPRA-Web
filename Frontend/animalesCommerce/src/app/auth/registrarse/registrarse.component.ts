@@ -34,7 +34,7 @@ export class RegistrarseComponent implements OnInit {
       next: (response) => {
         if (response){
           alert("Registro aprobado!");
-          this.router.navigate(['/miCuenta/'])
+          this.router.navigate(['/login/'])
         } 
       },
       error: () => {
