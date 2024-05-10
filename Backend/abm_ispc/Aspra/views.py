@@ -6,14 +6,8 @@ from rest_framework.permissions import IsAdminUser, AllowAny
 from knox.models import AuthToken
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
-from .serializers import (
-    UserSerializer,
-    RegisterSerializer,
-    AnimalesSerializer,
-    ContactoSerializer,
-    DonacionSerializer,
-)
-from .models import Animales, Contacto, Donacion
+from .serializers import UserSerializer, RegisterSerializer, AnimalSerializer, DonacionSerializer
+from .models import Animal, Donacion
 
 #----------user
 class RegisterAPI(generics.GenericAPIView):
@@ -41,17 +35,17 @@ class LoginAPI(KnoxLoginView):
 
 class VerAnimalesView(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
-    queryset = Animales.objects.all()
-    serializer_class = AnimalesSerializer
+    queryset = Animal.objects.all()
+    serializer_class = AnimalSerializer
 
 
-class VerContactoView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = [AllowAny]
-    queryset = Contacto.objects.all()
-    serializer_class = ContactoSerializer
+# class VerContactoView(viewsets.ReadOnlyModelViewSet):
+#     permission_classes = [AllowAny]
+#     queryset = Contacto.objects.all()
+#     serializer_class = ContactoSerializer
 
 
-class VerDonacionView(viewsets.ReadOnlyModelViewSet):
+class VerDonacionesView(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
     queryset = Donacion.objects.all()
     serializer_class = DonacionSerializer
@@ -59,10 +53,9 @@ class VerDonacionView(viewsets.ReadOnlyModelViewSet):
 
 class AgregarAnimalView(APIView):
     permission_classes = [AllowAny]
-
     # permission_classes = [IsAdminUser]
     def post(self, request, format=None):
-        serializer = AnimalesSerializer(data=request.data)
+        serializer = AnimalSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

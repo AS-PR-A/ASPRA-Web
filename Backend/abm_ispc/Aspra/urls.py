@@ -2,8 +2,8 @@ from django.urls import path, include
 from .views import (
     VerAnimalesView,
     AgregarAnimalView,
-    VerContactoView,
-    VerDonacionView,
+    # VerContactoView,
+    VerDonacionesView,
 )
 #-------------------user
 from knox import views as knox_views
@@ -13,12 +13,12 @@ from .views import RegisterAPI
 
 urlpatterns = [
     #-------------------user
-     path('auth/registro/', RegisterAPI.as_view(), name='register'),
-     path('auth/login/', LoginAPI.as_view(), name='login'),
-     path('auth/logout/', knox_views.LogoutView.as_view(), name='logout'),
-     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
-    path("pages/animales/", VerAnimalesView.as_view({"get": "list"}), name="pages_VerAnimales"),
-    path("pages/contacto/", VerContactoView.as_view({"get": "list"}), name="pages_VerContacto"),
-    path("pages/donacion/", VerDonacionView.as_view({"get": "list"}), name="pages_VerDonacion"),
-    path("pages/agregarAnimal/", AgregarAnimalView.as_view(), name="pages_agregarAnimal"),
+     path('auth/registro/', RegisterAPI.as_view(), name='auth_register'),
+     path('auth/login/', LoginAPI.as_view(), name='auth_login'),
+     path('auth/logout/', knox_views.LogoutView.as_view(), name='auth_logout'),
+     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name='auth_logoutall'),
+    path("pages/animales/listado", VerAnimalesView.as_view({"get": "list"}), name="pages_VerAnimales"),
+    # path("pages/contacto/", VerContactoView.as_view({"get": "list"}), name="pages_VerContacto"),
+    path("pages/donaciones/", VerDonacionesView.as_view({"get": "list"}), name="pages_VerDonaciones"),
+    path("pages/animales/agregar", AgregarAnimalView.as_view(), name="pages_agregarAnimal"),
 ]
