@@ -18,7 +18,7 @@ from .models import Animal
 
 
 class RefugioAdmin(admin.ModelAdmin):
-    list_display = ("id", "nombre", "telefono", "email", "direccion", "ciudad", "provincia")
+    list_display = ("nombre", "telefono", "email", "direccion", "ciudad", "provincia")
 
 
 class VeterinariosAdmin(admin.ModelAdmin):
@@ -34,14 +34,14 @@ class ReporteAdmin(admin.ModelAdmin):
 
 
 class PerfilAdmin(admin.ModelAdmin):
-    list_display = ("usuario","nombre", "telefono", "direccion", "ciudad", "provincia")
+    list_display = ("usuario","nombre", "Apellido", "telefono", "direccion", "ciudad", "provincia")
 
 class TipoAnimalAdmin(admin.ModelAdmin):
-    list_display = ("id", "tipo")
+    list_display = ["tipo"]
 
 
 class AnimalAdmin(admin.ModelAdmin):
-    list_display = ("id", "alias", "edad", "tamano", "raza", "fecha_ingreso", "img", "refufio", "tipo", 'usuario')
+    list_display = ("alias", "descripcion", "fecha_ingreso", "img", "refugio", "tipo", 'usuario')
 
 admin.site.register(Refugio, RefugioAdmin)
 admin.site.register(Veterinario, VeterinariosAdmin)

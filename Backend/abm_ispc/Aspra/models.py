@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save #Relaciona los datos con la tabla User de knox
 
 class Refugio(models.Model):
-    id = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=45, blank=False)
+    nombre = models.CharField(max_length=45, blank=False, primary_key=True)
     horario = models.CharField(max_length=80)
     telefono = models.CharField(max_length=45, blank=False)
     email = models.EmailField(blank=False)
@@ -61,8 +60,7 @@ class Veterinario(models.Model):
 
 
 class TipoAnimal(models.Model):
-    id = models.AutoField(primary_key=True)
-    tipo = models.CharField(max_length=45, blank=False)
+    tipo = models.CharField(max_length=45, blank=False, primary_key=True)
 
     class Meta:
         db_table = "TipoAnimal"
@@ -76,9 +74,10 @@ class TipoAnimal(models.Model):
         return self.tipo
 
 class Perfil(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile") #Relaciona los datos con la tabla User de knox
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile", primary_key=True) #Relaciona los datos con la tabla User de knox
     #dni = models.CharField(primary_key=True, max_length=45, blank=False)
     nombre = models.CharField(max_length=45, blank=False)
+    Apellido = models.CharField(max_length=45, blank=False)
     #contrasena = models.CharField(max_length=45, blank=False)
     telefono = models.CharField(max_length=45, blank=False)
     #email = models.CharField(max_length=45, blank=False)
@@ -100,13 +99,11 @@ class Perfil(models.Model):
 class Animal(models.Model):
     id = models.AutoField(primary_key=True)
     alias = models.CharField(max_length=45, blank=False)
-    edad = models.IntegerField(blank=False)
-    tamano = models.CharField(max_length=45, blank=False)
-    raza = models.CharField(max_length=45, blank=False)
+    descripcion = models.CharField(max_length=180, blank=False)
     fecha_ingreso = models.DateField(blank=False)
     img = models.CharField(max_length=45, blank=False)
     # img = models.ImageField(upload_to='animales/')
-    refufio = models.OneToOneField(Refugio, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
+    refugio = models.OneToOneField(Refugio, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
     tipo = models.OneToOneField(TipoAnimal, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
     usuario = models.OneToOneField(Perfil, on_delete=models.SET_NULL, null=True, blank=True)  #Reemplazo de tabla intermedia por metodo OneToOneField  
 
@@ -155,6 +152,7 @@ class Donacion(models.Model):
     def __str__(self):
         return str(self.id)
 
+#Crear perfil y asociarlo a un usuario nuevo automaticamente
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Perfil.objects.create(usuario=instance)
