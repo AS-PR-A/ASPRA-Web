@@ -4,13 +4,12 @@
 <div align="center">
 
 # 🐾 ASPRA WEB 🐾
-![imagen](https://github.com/JDGA1997/ASPRA-Movil/assets/105946879/e1aedf58-d0d0-49da-8b61-d08e8a653fb6)
-
+![imagen](https://raw.githubusercontent.com/AS-PR-A/ASPRA-Web/main/Frontend/animalesCommerce/src/assets/img/ASPRA.png)
 <br>
 
 <br />
  
-## Funcionalidades del sitio web
+## Funcionalidades del sitio web 📑📑
 
 Registro
 
@@ -80,5 +79,7 @@ MySQL
 ### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues)
 
 ### [Sprint 1](https://github.com/AS-PR-A/ASPRA-Web/milestone/1)
+
+### [ASPRA MOVIL](https://github.com/AS-PR-A/ASPRA-Movil)
 
 </div>
