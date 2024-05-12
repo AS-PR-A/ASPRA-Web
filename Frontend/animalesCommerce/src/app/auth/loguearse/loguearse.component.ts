@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
-import { LoginService } from 'src/app/services/login.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class LoguearseComponent {
 
   form;
 
-  constructor(private formBuilder:FormBuilder, private login:LoginService, private router:Router) {
+  constructor(private formBuilder:FormBuilder, private auth:AuthService, private router:Router) {
     this.form=this.formBuilder.group({
       username:['',Validators.required],
       password:['',[Validators.required, Validators.minLength(8)]]
@@ -30,17 +30,18 @@ export class LoguearseComponent {
   onEnviar(event:Event){
     event.preventDefault();
     if (this.form.valid) {
-      this.login.login(this.form.value).subscribe({
-        next: (response) => {
+      this.auth.login(this.form.value).subscribe(
+        { next: (response) => {
           if (response){
             alert("Inicio aprobado!");
+            console.log("DATA" + JSON.stringify(response));
             this.router.navigate(['/miCuenta/'])
           } 
         },
         error: () => {
           alert("Credenciales incorrectas...")
-        }
-      })
+        }}
+      )
     }
     this.form.markAllAsTouched()
   }

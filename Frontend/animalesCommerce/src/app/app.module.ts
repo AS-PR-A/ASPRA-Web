@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, inject } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MiCuentaComponent } from './auth/mi-cuenta/mi-cuenta.component';
 import { AgregarAnimalComponent } from './pages/agregar-animal/agregar-animal.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
   { path: 'finalizarAdopcion', component: FinalizarAdopcionComponent },
   { path: 'listaAdopcion', component: ListaAdopcionComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'miCuenta', component: MiCuentaComponent },
+  { path: 'miCuenta', canActivate:[AuthGuard], component: MiCuentaComponent },
   { path: 'agregarAnimal', component: AgregarAnimalComponent },
 ];
 
