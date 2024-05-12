@@ -28,7 +28,7 @@ class Veterinario(models.Model):
     nombre = models.CharField(max_length=45, blank=False)
     telefono = models.CharField(max_length=45, blank=False)
     email = models.EmailField(blank=False)
-    refugio = models.OneToOneField(Refugio, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
+    refugio = models.ForeignKey(Refugio, on_delete=models.SET_NULL, null=True)
 
     class Meta:
         db_table = "Veterinario"
@@ -103,9 +103,9 @@ class Animal(models.Model):
     fecha_ingreso = models.DateField(blank=False)
     img = models.CharField(max_length=45, blank=False)
     # img = models.ImageField(upload_to='animales/')
-    refugio = models.OneToOneField(Refugio, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
-    tipo = models.OneToOneField(TipoAnimal, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
-    usuario = models.OneToOneField(Perfil, on_delete=models.SET_NULL, null=True, blank=True)  #Reemplazo de tabla intermedia por metodo OneToOneField  
+    refugio = models.ForeignKey(Refugio, on_delete=models.SET_NULL, null=True) 
+    tipo = models.ForeignKey(TipoAnimal, on_delete=models.SET_NULL, null=True) 
+    usuario = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True, blank=True)   
 
     class Meta:
         db_table = "Animal"
@@ -123,7 +123,7 @@ class Reporte(models.Model):
     direccion = models.CharField(max_length=45, blank=False)
     motivo = models.CharField(max_length=45, blank=False)
     descripcion = models.TextField(max_length=150, blank=False)
-    usuario = models.OneToOneField(Perfil, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
+    usuario = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True)
 
     class Meta:
         db_table = "Reporte"
@@ -139,7 +139,7 @@ class Reporte(models.Model):
 class Donacion(models.Model):
     id = models.AutoField(primary_key=True)
     monto = models.PositiveIntegerField()
-    usuario = models.OneToOneField(Perfil, on_delete=models.SET_NULL, null=True) #Reemplazo de clave foranea por metodo OneToOneField
+    usuario = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True)
 
     class Meta:
         db_table = "Donacion"

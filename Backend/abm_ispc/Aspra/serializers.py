@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Animal,  Donacion, Refugio
+from .models import Animal,  Donacion, Refugio, Veterinario
 from django.contrib.auth.models import User
 
 
@@ -42,4 +42,9 @@ class DonacionSerializer(serializers.ModelSerializer):
 class RefugioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Refugio
+        fields = "__all__"
+
+class VeterinarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Veterinario
         fields = "__all__"
