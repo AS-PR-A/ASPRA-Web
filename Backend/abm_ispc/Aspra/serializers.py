@@ -27,13 +27,6 @@ class AnimalSerializer(serializers.ModelSerializer):
         model = Animal
         fields = "__all__"
 
-
-# class ContactoSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Contacto
-#         fields = "__all__"
-
-
 class DonacionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Donacion

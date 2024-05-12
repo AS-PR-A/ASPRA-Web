@@ -34,11 +34,6 @@ class LoginAPI(KnoxLoginView):
         return super(LoginAPI, self).post(request, format=None)
 #----------fin_user
 
-# class VerContactoView(viewsets.ReadOnlyModelViewSet):
-#     permission_classes = [AllowAny]
-#     queryset = Contacto.objects.all()
-#     serializer_class = ContactoSerializer
-
 class VerDonacionesView(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
     queryset = Donacion.objects.all()

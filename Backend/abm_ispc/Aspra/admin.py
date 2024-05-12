@@ -10,12 +10,6 @@ from .models import Reporte
 from .models import Perfil
 from .models import TipoAnimal
 from .models import Animal
-# from .models import Contacto
-
-
-# class ContactoAdmin(admin.ModelAdmin):
-#     list_display = ("id", "horario", "telefono", "email")
-
 
 class RefugioAdmin(admin.ModelAdmin):
     list_display = ("nombre", "telefono", "email", "direccion", "ciudad", "provincia")
@@ -50,4 +44,3 @@ admin.site.register(Reporte, ReporteAdmin)
 admin.site.register(Perfil, PerfilAdmin)
 admin.site.register(TipoAnimal, TipoAnimalAdmin)
 admin.site.register(Animal, AnimalAdmin)
-# admin.site.register(Contacto, ContactoAdmin)

@@ -4,7 +4,7 @@ from django.db.models.signals import post_save #Relaciona los datos con la tabla
 
 class Refugio(models.Model):
     nombre = models.CharField(max_length=45, blank=False, primary_key=True)
-    horario = models.CharField(max_length=80)
+    horario = models.CharField(max_length=80) 
     telefono = models.CharField(max_length=45, blank=False)
     email = models.EmailField(blank=False)
     direccion = models.CharField(max_length=45, blank=False)
@@ -40,24 +40,6 @@ class Veterinario(models.Model):
 
     def __str__(self):
         return self.nombre
-
-# class Contacto(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     horario = models.CharField(max_length=80)
-#     telefono = models.PositiveIntegerField(blank=False)
-#     email = models.EmailField(blank=False)
-
-#     class Meta:
-#         db_table = "Contacto"
-#         verbose_name = "Contacto"
-#         verbose_name_plural = "Contactos"
-
-#     def __unicode__(self):
-#         return self.horario
-
-#     def __str__(self):
-#         return self.horario
-
 
 class TipoAnimal(models.Model):
     tipo = models.CharField(max_length=45, blank=False, primary_key=True)

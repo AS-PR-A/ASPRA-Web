@@ -13,7 +13,6 @@ urlpatterns = [
     path('auth/login/', LoginAPI.as_view(), name='auth_login'),
     path('auth/logout/', knox_views.LogoutView.as_view(), name='auth_logout'),
     path('auth/logoutall/', knox_views.LogoutAllView.as_view(), name='auth_logoutall'),
-    # path("pages/contacto/", VerContactoView.as_view({"get": "list"}), name="pages_VerContacto"),
     path("pages/donaciones/", VerDonacionesView.as_view({"get": "list"}), name="pages_verDonaciones"),
     path("pages/refugios/listado/", VerRefugiosView.as_view({"get": "list"}), name="pages_verRefugios"),
     path("pages/veterinarios/listado/", VerVeterinariosView.as_view({"get": "list"}), name="pages_verVeterinarios"),
