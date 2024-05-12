@@ -83,5 +83,11 @@ class AnimalesView(viewsets.ViewSet):
             return Response(serializer.data)
         return Response(status=status.HTTP_404_NOT_FOUND)
     
+    def delete(self,request,id):
+        queryset = Animal.objects.get(id=id)
+        queryset.delete()
+        return Response(status=status.HTTP_202_ACCEPTED)
+
+    
 
 
