@@ -75,5 +75,13 @@ class AnimalesView(viewsets.ViewSet):
         serializer = AnimalSerializer(animal)
         return Response(serializer.data)    
     
+    def update(self, request, id=None):
+        queryset = Animal.objects.get(id=id)
+        serializer = AnimalSerializer(instance = queryset, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    
 
 

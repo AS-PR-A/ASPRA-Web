@@ -20,4 +20,5 @@ urlpatterns = [
     path("pages/animales/agregar/", AnimalesView.as_view({"post": "create"}), name="pages_agregarAnimal"),
     path("pages/animales/listado/", AnimalesView.as_view({"get": "list"}), name="pages_verAnimales"),
     path("pages/animales/<id>/", AnimalesView.as_view({"get": "retrieve"}), name="pages_verAnimal"),
+    path("pages/animales/modificar/<id>/", AnimalesView.as_view({"put": "update"}), name="pages_modificarAnimal"),
 ]
