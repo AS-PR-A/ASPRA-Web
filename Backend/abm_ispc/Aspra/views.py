@@ -7,8 +7,8 @@ from rest_framework.permissions import IsAdminUser, AllowAny
 from knox.models import AuthToken
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
-from .serializers import UserSerializer, RegisterSerializer, AnimalSerializer, DonacionSerializer, RefugioSerializer, VeterinarioSerializer
-from .models import Animal, Donacion, Refugio, Veterinario
+from .serializers import UserSerializer, RegisterSerializer, AnimalSerializer, DonacionSerializer, RefugioSerializer, VeterinarioSerializer, PerfilSerializer
+from .models import Animal, Donacion, Refugio, Veterinario, Perfil
 
 #----------user
 class RegisterAPI(generics.GenericAPIView):
@@ -83,6 +83,12 @@ class AnimalesView(viewsets.ViewSet):
         queryset.delete()
         return Response(status=status.HTTP_202_ACCEPTED)
 
-    
+class PerfilView(viewsets.ViewSet):
+        
+    def retrieve(self,request,id):
+        queryset = Perfil.objects.all()
+        perfil = get_object_or_404(queryset,id=id)
+        serializer = PerfilSerializer(perfil)
+        return Response(serializer.data)   
 
 

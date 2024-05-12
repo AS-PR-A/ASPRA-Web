@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (VerDonacionesView, VerRefugiosView, VerVeterinariosView, AnimalesView)
+from .views import (VerDonacionesView, VerRefugiosView, VerVeterinariosView, AnimalesView, PerfilView)
 
 #-------------------user
 from knox import views as knox_views
@@ -21,4 +21,5 @@ urlpatterns = [
     path("pages/animales/<id>/", AnimalesView.as_view({"get": "retrieve"}), name="pages_verAnimal"),
     path("pages/animales/modificar/<id>/", AnimalesView.as_view({"put": "update"}), name="pages_modificarAnimal"),
     path("pages/animales/eliminar/<id>/", AnimalesView.as_view({"delete": "delete"}), name="pages_eliminarAnimal"),
+    path("pages/perfiles/<id>/", PerfilView.as_view({"get": "retrieve"}), name="pages_verPerfil"),
 ]
