@@ -90,5 +90,13 @@ class PerfilView(viewsets.ViewSet):
         perfil = get_object_or_404(queryset,id=id)
         serializer = PerfilSerializer(perfil)
         return Response(serializer.data)   
+    
+    def update(self, request, id=None):
+        queryset = Perfil.objects.get(id=id)
+        serializer = PerfilSerializer(instance = queryset, data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
 
