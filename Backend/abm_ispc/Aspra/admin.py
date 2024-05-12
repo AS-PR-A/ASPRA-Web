@@ -41,7 +41,7 @@ class TipoAnimalAdmin(admin.ModelAdmin):
 
 
 class AnimalAdmin(admin.ModelAdmin):
-    list_display = ("alias", "descripcion", "fecha_ingreso", "img", "refugio", "tipo", 'usuario')
+    list_display = ("nombre", "descripcion", "fecha_ingreso", "img", "refugio", "tipo", "usuario")
 
 admin.site.register(Refugio, RefugioAdmin)
 admin.site.register(Veterinario, VeterinariosAdmin)

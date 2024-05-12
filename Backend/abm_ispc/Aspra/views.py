@@ -53,17 +53,19 @@ class VerVeterinariosView(viewsets.ReadOnlyModelViewSet):
     queryset = Veterinario.objects.all()
     serializer_class = VeterinarioSerializer
 
-class VerAnimalesView(viewsets.ReadOnlyModelViewSet):
-    permission_classes = [AllowAny]
-    queryset = Animal.objects.all()
-    serializer_class = AnimalSerializer
+class AnimalesView(viewsets.ViewSet):
 
-class AgregarAnimalView(APIView):
-    permission_classes = [AllowAny]
-    # permission_classes = [IsAdminUser]
-    def post(self, request, format=None):
+    def list(self,request):
+        permission_classes = [AllowAny]
+        queryset = Animal.objects.all()
+        serializer = AnimalSerializer(queryset, many = True)
+        return Response(serializer.data)
+    
+    def create(self,request):
         serializer = AnimalSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
