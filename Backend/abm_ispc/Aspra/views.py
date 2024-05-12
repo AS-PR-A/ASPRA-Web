@@ -1,4 +1,5 @@
 from django.contrib.auth import login
+from django.shortcuts import get_object_or_404
 from rest_framework import status, generics, viewsets, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -68,4 +69,11 @@ class AnimalesView(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+    def retrieve(self,request,id):
+        queryset = Animal.objects.all()
+        animal = get_object_or_404(queryset,id=id)
+        serializer = AnimalSerializer(animal)
+        return Response(serializer.data)    
+    
+
 
