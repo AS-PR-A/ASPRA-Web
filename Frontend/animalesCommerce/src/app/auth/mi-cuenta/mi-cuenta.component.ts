@@ -9,26 +9,26 @@ import { MiCuentaService } from 'src/app/services/mi-cuenta.service';
 })
 export class MiCuentaComponent implements OnInit{
   form;
-  lista: any;
+  perfil: any;
   constructor(private formBuilder:FormBuilder, private miCuenta:MiCuentaService) {
     this.form=this.formBuilder.group({
-      email:['',[Validators.required, Validators.email]],
       nombre:['',[Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
-      dni:['',[Validators.required, Validators.minLength(7), Validators.maxLength(8)]],
+      apellido:['',[Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
       telefono:['',[Validators.required, Validators.minLength(8), Validators.maxLength(15)]],
-      ciudad:['',[Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
-      codigoPostal:['',[Validators.required, Validators.minLength(4), Validators.maxLength(5)]]
+      direccion: ['', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-zA-Z]).{3,}$')]],
+      ciudad: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      provincia: ['', Validators.required],
     })
   }
 
   ngOnInit(): void {
-    this.lista = this.listaMiCuenta();
+    this.perfil = this.verPerfil();
   }
 
-  listaMiCuenta():any {
-    this.miCuenta.verMiCuenta().subscribe({
+  verPerfil():any {
+    this.miCuenta.verPerfil().subscribe({
       next: (response) => {
-        this.lista = response
+        this.perfil = response
       },
       error: (errorResponse) => {
         console.error(errorResponse)
@@ -36,23 +36,23 @@ export class MiCuentaComponent implements OnInit{
     })
   }
 
-  get email(){
-    return this.form.get("email")
-  }
   get nombre(){
     return this.form.get("nombre")
   }
-  get dni(){
-    return this.form.get("dni")
+  get apellido(){
+    return this.form.get("apellido")
   }
   get telefono(){
     return this.form.get("telefono")
   }
+  get direccion(){
+    return this.form.get("direccion")
+  }
   get ciudad(){
     return this.form.get("ciudad")
   }
-  get codigoPostal(){
-    return this.form.get("codigoPostal")
+  get provincia(){
+    return this.form.get("provincia")
   }
 
   onEnviar(event:Event){

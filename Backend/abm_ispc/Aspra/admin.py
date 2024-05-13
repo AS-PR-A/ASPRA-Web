@@ -28,7 +28,7 @@ class ReporteAdmin(admin.ModelAdmin):
 
 
 class PerfilAdmin(admin.ModelAdmin):
-    list_display = ("id", "usuario","nombre", "Apellido", "telefono", "direccion", "ciudad", "provincia")
+    list_display = ("id", "usuario","nombre", "apellido", "telefono", "direccion", "ciudad", "provincia")
 
 class TipoAnimalAdmin(admin.ModelAdmin):
     list_display = ["tipo"]

@@ -59,7 +59,7 @@ class Perfil(models.Model):
     id = models.AutoField(primary_key=True)
     usuario = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile") #Relaciona los datos con la tabla User de knox
     nombre = models.CharField(max_length=45, blank=False)
-    Apellido = models.CharField(max_length=45, blank=False)
+    apellido = models.CharField(max_length=45, blank=False)
     telefono = models.CharField(max_length=45, blank=False)
     direccion = models.CharField(max_length=45, blank=False)
     ciudad = models.CharField(max_length=45, blank=False)

@@ -19,11 +19,11 @@ export class AuthService {
   }
 
   login(data:any):Observable<any> {
-    return this.http.post(this.url,data).pipe(map(data=>{
-      localStorage.setItem('currentUser',JSON.stringify(data));
-      this.currentUserSubject.next(data);
+    return this.http.post(this.url,data).pipe(map(response=>{
+      localStorage.setItem('currentUser',data.username); //Guardamos el username en localStorage para buscar el perfil en BD
+      this.currentUserSubject.next(response);
       this.loggedIn = true;
-      return data;
+      return response;
     }));
   }
 
