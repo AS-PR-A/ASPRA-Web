@@ -6,6 +6,7 @@ export const AuthGuard: CanActivateFn = () => {
      if(localStorage.getItem('currentUser')){
          return true;
      }else{
+        alert("Debe iniciar sesion para ingresar a esta pagina")
          route.navigate(['/login'])
          return false;
      }
