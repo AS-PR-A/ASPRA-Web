@@ -9,6 +9,7 @@ from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from .serializers import UserSerializer, RegisterSerializer, AnimalSerializer, DonacionSerializer, RefugioSerializer, VeterinarioSerializer, PerfilSerializer
 from .models import Animal, Donacion, Refugio, Veterinario, Perfil
+from django.contrib.auth.models import User
 
 #----------user
 class RegisterAPI(generics.GenericAPIView):
@@ -85,11 +86,13 @@ class AnimalesView(viewsets.ViewSet):
 
 class PerfilView(viewsets.ViewSet):
         
-    def retrieve(self,request,id):
+    def retrieve(self,request,user):
+        user = User.objects.get(username=user)
         queryset = Perfil.objects.all()
-        perfil = get_object_or_404(queryset,id=id)
+        perfil = get_object_or_404(queryset,id=user.id)
         serializer = PerfilSerializer(perfil)
-        return Response(serializer.data)   
+        return Response(serializer.data)
+   
     
     def update(self, request, id=None):
         queryset = Perfil.objects.get(id=id)
@@ -98,5 +101,8 @@ class PerfilView(viewsets.ViewSet):
             serializer.save()
             return Response(serializer.data)
         return Response(status=status.HTTP_404_NOT_FOUND)
+    
+
+    
 
 
