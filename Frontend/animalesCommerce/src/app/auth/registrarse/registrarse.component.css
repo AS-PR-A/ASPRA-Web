@@ -8,11 +8,17 @@ form{
     margin: 150px auto;
 }
 
-.btn{
-    background-color:#023B48
+.btn.btn-primary{
+    background-color: rgb(11, 5, 69);
+    font-family: MartianMono;
+    border: solid 1px;
+    border-color: rgb(11, 5, 69);
+    border-radius: 38px;
 }
-.btn:hover{
-    background-color:#006075
+.btn.btn-primary:hover{
+    background-color: rgb(22, 10, 129);
+    border-color: rgb(22, 10, 129);
+    color: rgb(252, 252, 252);
 }
 
 .error-message {
@@ -47,16 +53,6 @@ form{
 .form-control {
         margin-bottom: 10px;
 }
-.btn-primary {
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: none;
-}
-      
-.btn-primary:hover {
-    background-color: #0d7a6c;
-}
 #provincia {
     margin-top: 10px;
     display: block;
@@ -64,6 +60,8 @@ form{
   }
 @media (min-width: 992px) {
     .contenedor-form{
+        background-color: rgba(216, 216, 216, 0.573);
+        margin: 200px auto;
         width: 100%;
         display: flex;
         justify-content: center;
