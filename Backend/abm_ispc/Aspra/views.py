@@ -94,8 +94,9 @@ class PerfilView(viewsets.ViewSet):
         return Response(serializer.data)
    
     
-    def update(self, request, id=None):
-        queryset = Perfil.objects.get(id=id)
+    def update(self, request, user):
+        user = User.objects.get(username=user)
+        queryset = Perfil.objects.get(id=user.id)
         serializer = PerfilSerializer(instance = queryset, data = request.data)
         if serializer.is_valid():
             serializer.save()

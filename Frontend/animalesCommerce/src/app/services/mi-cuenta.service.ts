@@ -18,4 +18,8 @@ export class MiCuentaService {
   verPerfil():Observable<any> {
     return this.http.get<any>(this.url + this.user + "/");
   }
+
+  modificarPerfil(data:any):Observable<any>{
+    return this.http.put(this.url + "modificar/" + this.user + "/",data)
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { MiCuentaService } from 'src/app/services/mi-cuenta.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mi-cuenta',
@@ -10,14 +11,18 @@ import { MiCuentaService } from 'src/app/services/mi-cuenta.service';
 export class MiCuentaComponent implements OnInit{
   form;
   perfil: any;
-  constructor(private formBuilder:FormBuilder, private miCuenta:MiCuentaService) {
+  user = localStorage.getItem("currentUser")
+
+  constructor(private formBuilder:FormBuilder, private miCuenta:MiCuentaService, private router:Router) {
+
     this.form=this.formBuilder.group({
-      nombre:['',[Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
-      apellido:['',[Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
+      nombre:['',[Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
+      apellido:['',[Validators.required, Validators.minLength(3), Validators.maxLength(300)]],
       telefono:['',[Validators.required, Validators.minLength(8), Validators.maxLength(15)]],
       direccion: ['', [Validators.required, Validators.pattern('^(?=.*\\d)(?=.*[a-zA-Z]).{3,}$')]],
       ciudad: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       provincia: ['', Validators.required],
+      usuario: []
     })
   }
 
@@ -58,8 +63,16 @@ export class MiCuentaComponent implements OnInit{
   onEnviar(event:Event){
     event.preventDefault();
     if (this.form.valid) {
-      alert("Guardando en el servidor...")
+      this.form.value.usuario = this.perfil.usuario
+      this.miCuenta.modificarPerfil(this.form.value).subscribe({
+        next: (response) => {
+          if (response){
+            alert("Se actualizo perfil!");
+            this.router.navigate(['/listaAdopcion/'])
+          } 
+        }
+      })
     }
     this.form.markAllAsTouched()
-  }
+  } 
 }
