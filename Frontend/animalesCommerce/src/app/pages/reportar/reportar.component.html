@@ -1,44 +1,93 @@
-<h1>Reportar</h1>
+<main>
 
-<div class="container">
-  <img src="assets/img/denuncia.jpg">
+  <div class="encabezado">
+    
+    <img src="assets/img/denuncia.jpg" alt="">
+    
+  </div>
+<div class="content">
+  <form [formGroup]="form" class="wrapper p-5 m-5" (ngSubmit)="submitForm($event)">
+    <h4>Reportar</h4><br>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1">Email:</label><br>
+      <input type="email" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="email">
+      <div *ngIf="email?.errors && email?.touched">
+        <p *ngIf="email?.hasError('required')" class="text-danger">Ingrese un correo electrónico</p>
+        <p *ngIf="email?.hasError('email')" class="text-danger">Ingrese un email válido</p>
+      </div>
+    </div><br>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1">Motivo del reporte:</label><br>
+      <select class="form-select" aria-label="Default select example" formControlName="motivo">
+        <option selected>Perdido</option>
+        <option value="1">Maltratado</option>
+      </select>
+    </div><br>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2">Dirección</label><br>
+      <input type="text" formControlName="direccion" id="formGroupExampleInput2" placeholder="">
+      <div *ngIf="direccion?.errors && direccion?.touched">
+        <p *ngIf="direccion?.hasError('required')" class="text-danger">Ingrese una dirección</p>
+        <p *ngIf="direccion?.hasError('direccion')" class="text-danger">Ingrese una dirección válida</p>
+      </div>
+    </div><br>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1">Descripción</label><br>
+      <textarea formControlName="descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div *ngIf="descripcion?.errors && descripcion?.touched">
+        <p *ngIf="descripcion?.hasError('required')" class="text-danger">Ingrese una descripción</p>
+        <p *ngIf="descripcion?.hasError('descripcion')" class="text-danger">Ingrese una descripción</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary my-3">Enviar solicitud</button>
+    <!--<p *ngIf="submitForm" class="text-success">Reporte aprobado</p> -->
+  </form>
 </div>
+</main>
 
-<form [formGroup]="form" class="container p-5 m-5" (ngSubmit)="submitForm($event)">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email</label>
-    <input type="email" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="email">
-    <div *ngIf="email?.errors && email?.touched">
-      <p *ngIf="email?.hasError('required')" class="text-danger">Ingrese un correo electrónico</p>
-      <p *ngIf="email?.hasError('email')" class="text-danger">Ingrese un email valido</p>
-    </div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Motivo del reporte</label>
-    <select class="form-select" aria-label="Default select example" formControlName="motivo">
-      <option selected>Perdido</option>
-      <option value="1">Maltratado</option>
-    </select>
-  </div>
-  <div class="mb-3">
-    <label for="formGroupExampleInput2" class="form-label">Dirección</label>
-    <input type="text" formControlName="direccion" id="formGroupExampleInput2" placeholder="">
-    <div *ngIf="direccion?.errors && direccion?.touched">
-      <p *ngIf="direccion?.hasError('required')" class="text-danger">Ingrese una dirección</p>
-      <p *ngIf="direccion?.hasError('direccion')" class="text-danger">Ingrese una direccion valida</p>
-    </div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-    <textarea formControlName="descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <div *ngIf="descripcion?.errors && descripcion?.touched">
-      <p *ngIf="descripcion?.hasError('required')" class="text-danger">Ingrese una descripcion</p>
-      <p *ngIf="descripcion?.hasError('descripcion')" class="text-danger">Ingrese una descripcion</p>
-    </div>
-  </div>
-  <button type="submit" class="container btn btn-primary my-3" style="background-color: #023B48;">Enviar
-    solicitud</button>
-  <!--<p *ngIf="submitForm" class="text-success">Reporte aprobado</p> -->
+<!-- <main>
+  <h1>Reportar</h1>
 
+  <div class="container">
+    <img src="assets/img/denuncia.jpg">
+  </div>
 
-</form>
+  <form [formGroup]="form" class="container p-5 m-5" (ngSubmit)="submitForm($event)">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <input type="email" id="exampleFormControlInput1" placeholder="name@example.com" formControlName="email">
+      <div *ngIf="email?.errors && email?.touched">
+        <p *ngIf="email?.hasError('required')" class="text-danger">Ingrese un correo electrónico</p>
+        <p *ngIf="email?.hasError('email')" class="text-danger">Ingrese un email valido</p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Motivo del reporte</label>
+      <select class="form-select" aria-label="Default select example" formControlName="motivo">
+        <option selected>Perdido</option>
+        <option value="1">Maltratado</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Dirección</label>
+      <input type="text" formControlName="direccion" id="formGroupExampleInput2" placeholder="">
+      <div *ngIf="direccion?.errors && direccion?.touched">
+        <p *ngIf="direccion?.hasError('required')" class="text-danger">Ingrese una dirección</p>
+        <p *ngIf="direccion?.hasError('direccion')" class="text-danger">Ingrese una direccion valida</p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+      <textarea formControlName="descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div *ngIf="descripcion?.errors && descripcion?.touched">
+        <p *ngIf="descripcion?.hasError('required')" class="text-danger">Ingrese una descripcion</p>
+        <p *ngIf="descripcion?.hasError('descripcion')" class="text-danger">Ingrese una descripcion</p>
+      </div>
+    </div>
+    <button type="submit" class="container btn btn-primary my-3" style="background-color: #023B48;">Enviar
+      solicitud</button>
+    <!-<p *ngIf="submitForm" class="text-success">Reporte aprobado</p> -->
+
+<!--
+  </form>
+</main> -->
