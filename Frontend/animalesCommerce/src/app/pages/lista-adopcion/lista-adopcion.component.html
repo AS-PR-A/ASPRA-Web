@@ -8,21 +8,21 @@
         <p>Filtrar:</p>
         <form action="#" method="dialog">
             <select class="form-select" aria-label="Default select example">
-                <option selected>Tipo de animal</option>
+                <option selected>Refugio</option>
+                <option value="1">ASPRA</option>
+                <option value="2">Colaborador 1</option>
+                <option value="3">Colaborador 2</option>
+            </select>
+
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Tipo</option>
                 <option value="1">Gato</option>
                 <option value="2">Perro</option>
                 <option value="3">Conejo</option>
             </select>
 
             <select class="form-select" aria-label="Default select example">
-                <option selected>Tamaño</option>
-                <option value="1">Grande</option>
-                <option value="2">Mediano</option>
-                <option value="3">Pequeño</option>
-            </select>
-
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Edad</option>
+                <option selected>Ingreso</option>
                 <option value="1">5-12 Meses</option>
                 <option value="2">1 o 2 Años</option>
                 <option value="3">Mas de 3 años</option>
@@ -42,8 +42,8 @@
             <img [src]="element.img" class="card-img-top " alt="Foto animal">
             <div class="card-body">
                 <h5 class="card-title"><b>Nombre:</b> {{element.nombre}}</h5>
-                <p class="card-text"><b> Edad aprox.:</b> {{element.edad}} años</p>
-                <p class="card-text"><b>Tamaño:</b> {{element.tamano}}</p>
+                <p class="card-text"><b> Refugio:</b> {{element.refugio}}</p>
+                <p class="card-text"><b>Tipo:</b> {{element.tipo}}</p>
                 <a routerLink="/cart" class="btn btn-primary">Añadir al Carrito</a>
             </div>
         </div>
