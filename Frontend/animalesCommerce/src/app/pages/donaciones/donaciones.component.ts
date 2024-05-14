@@ -19,6 +19,7 @@ export class DonacionesComponent implements OnInit {
     this.listDona.verDonaciones().subscribe({
       next: (response) => {
         this.lista = response;
+        console.log(this.lista.data)
       },
       error: (errorResponse) => {
         console.error(errorResponse);

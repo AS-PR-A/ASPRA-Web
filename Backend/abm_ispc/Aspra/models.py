@@ -119,7 +119,8 @@ class Reporte(models.Model):
 class Donacion(models.Model):
     id = models.AutoField(primary_key=True)
     monto = models.PositiveIntegerField()
-    usuario = models.ForeignKey(Perfil, on_delete=models.SET_NULL, null=True)
+    nombre = models.CharField(max_length=45, blank=False)
+    apellido = models.CharField(max_length=45, blank=False)
 
     class Meta:
         db_table = "Donacion"
