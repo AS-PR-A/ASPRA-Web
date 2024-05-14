@@ -6,11 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ListadoVeterinariosService {
-  url: string = 'http://localhost:3000/';
-
+  url: string = 'http://127.0.0.1:8000/api/';
   constructor(private http: HttpClient) {}
 
   verVeterinarios(): Observable<any> {
-    return this.http.get<any>(this.url + 'veterinarios');
+    return this.http.get<any>(this.url + 'pages/veterinarios/listado/');
   }
 }

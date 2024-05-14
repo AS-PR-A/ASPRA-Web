@@ -1,53 +1,50 @@
 <div class="container2">
   <div class="box2">
-    <img src="/assets/img/img8.jpeg" alt="">
+    <img src="/assets/img/img8.jpeg" alt="" />
   </div>
 </div>
 
 <div class="textoVeterinarios">
-  <p>Los veterinarios se encargan de diagnosticar enfermedades, ofrecer tratamientos y realizar intervenciones médicas a
-    los animales, tratando siempre de preservar su salud. Además, también está entre sus funciones orientar y aconsejar
-    a los propietarios de las mascotas sobre el cuidado de los mismos.</p><br>
   <p>
-    Conocé a los especialiastas que nos acompañan en ASPRA
+    Los veterinarios se encargan de diagnosticar enfermedades, ofrecer
+    tratamientos y realizar intervenciones médicas a los animales, tratando
+    siempre de preservar su salud. Además, también está entre sus funciones
+    orientar y aconsejar a los propietarios de las mascotas sobre el cuidado de
+    los mismos.
   </p>
+  <br />
+  <p>Conocé a los especialiastas que nos acompañan en ASPRA</p>
 </div>
 
-
 <div class="container">
+  <div class="box">
+    <img src="/assets/img/img1.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img2.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img3.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img4.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img5.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img6.jpg" alt="" />
+  </div>
+  <div class="box">
+    <img src="/assets/img/img7.jpg" alt="" />
+  </div>
 
-  <div class="box">
-    <img src="/assets/img/img1.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img2.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img3.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img4.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img5.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img6.jpg" alt="">
-  </div>
-  <div class="box">
-    <img src="/assets/img/img7.jpg" alt="">
-  </div>
-
-
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem repudiandae quidem eligendi, et dolorum fugiat.
-    Temporibus asperiores ad sint maiores repudiandae vel voluptatibus. Unde nisi perspiciatis vitae velit quaerat
-    totam!</p>
   <div class="tarjeta" *ngFor="let elemento of lista">
-    <div class="imagen"></div>
-    <div>
-      <p><b>Nombre:</b> {{elemento.nombre}}</p>
-      <p><b>Email:</b> {{elemento.email}}</p>
-      <p><b>Telefono:</b> {{elemento.telefono}}</p>
+    <div class="imagen">
+      <p><b>Nro Matricula:</b> {{ elemento.matricula }}</p>
+      <p><b>Nombre:</b> {{ elemento.nombre }}</p>
+      <p><b>Email:</b> {{ elemento.email }}</p>
+      <p><b>Telefono:</b> {{ elemento.telefono }}</p>
     </div>
   </div>
 </div>
