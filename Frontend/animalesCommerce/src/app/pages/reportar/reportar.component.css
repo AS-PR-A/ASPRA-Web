@@ -62,6 +62,13 @@ input[placeholder]{
 .ng-invalid:not(form).ng-touched{
     border-left: 5px solid red;
 }
+.ng-valid:not(form).ng-touched {
+  border-left: 5px solid green;
+}
+
+.ng-invalid:not(form).ng-touched {
+  border-left: 5px solid red;
+}
 select{
     display: block;
     width: 100%;
