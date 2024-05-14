@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,18 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isLogged: boolean = true
-constructor(private auth:AuthService){
-  this.isLogged = this.auth.estaAutenticado
+  isLogged: boolean = false
+
+constructor(private auth:AuthService, private router: Router){
 }
-logout(event:Event){
+
+ngOnInit(): void {
+  this.isLogged = this.auth.estaAutenticado()
+}
+
+logout(){
   this.auth.logout()
+  window.location.reload();
 }
 
 }

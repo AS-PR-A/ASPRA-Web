@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class MiCuentaComponent implements OnInit{
   form;
   perfil: any;
-  user = localStorage.getItem("currentUser")
+  user = sessionStorage.getItem("currentUser")
 
   constructor(private formBuilder:FormBuilder, private miCuenta:MiCuentaService, private router:Router) {
 
@@ -69,6 +69,7 @@ export class MiCuentaComponent implements OnInit{
           if (response){
             alert("Se actualizo perfil!");
             this.router.navigate(['/listaAdopcion/'])
+            window.location.reload();
           } 
         }
       })

@@ -11,32 +11,30 @@ export class AuthService {
   url:string = "http://127.0.0.1:8000/api/auth/login/"
   currentUserSubject:BehaviorSubject<any>;
   currentUser: Observable<any>;
-  loggedIn: boolean = false;
+
   constructor(private http:HttpClient) { 
     console.log("Autenticando...")
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')||'{}'));
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')||'{}'));
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
   login(data:any):Observable<any> {
     return this.http.post(this.url,data).pipe(map(response=>{
-      localStorage.setItem('currentUser',JSON.stringify(data.username)); //Guardamos el username en localStorage para buscar el perfil en BD
+      sessionStorage.setItem('currentUser',JSON.stringify(data.username)); //Guardamos el username en sessionStorage para buscar el perfil en BD
       this.currentUserSubject.next(response);
-      this.loggedIn = true;
       return response;
     }));
   }
 
-  logout(): void{
-    localStorage.removeItem('currenUser');
-    this.loggedIn = false;
+  logout(){
+    sessionStorage.removeItem('currentUser')
   }
   
   get usuarioAutenticado(): any{
-    return this.currentUserSubject.value;
+    return this.currentUserSubject.value
   }
 
-  get estaAutenticado(): boolean {
-    return this.loggedIn;
+ estaAutenticado(): boolean {
+  return sessionStorage.getItem("currentUser") !== null;
   }
 }

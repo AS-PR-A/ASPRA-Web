@@ -94,16 +94,16 @@
                 aria-labelledby="dropdownMenuLink"
                 id="estiloIcon"
               >
-                <li *ngIf="isLogged == false">
+                <li *ngIf="!isLogged">
                   <a class="dropdown-item" routerLink="/login">INICIAR SESION</a>
                 </li>
-                <li onclick="logout()">
-                  <a class="dropdown-item" routerLink="/">CERRAR SESION</a>
+                <li *ngIf="isLogged" (click)="logout()">
+                  <a class="dropdown-item" routerLink="">CERRAR SESION</a>
                 </li>
-                <li>
+                <li *ngIf="!isLogged">
                   <a class="dropdown-item" routerLink="/registrarse">CREAR CUENTA</a>
                 </li>
-                <li>
+                <li *ngIf="isLogged">
                   <a class="dropdown-item" routerLink="/miCuenta">MI CUENTA</a>
                 </li>
               </ul>

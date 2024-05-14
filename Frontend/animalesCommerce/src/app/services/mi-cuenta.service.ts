@@ -9,7 +9,7 @@ export class MiCuentaService {
 
   url:string = "http://127.0.0.1:8000/api/pages/perfiles/"
 
-  user = localStorage.getItem("currentUser")
+  user = sessionStorage.getItem("currentUser")
 
   data: any
 
