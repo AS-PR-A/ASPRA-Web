@@ -1,6 +1,122 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.content{
+  display: flex;
+  justify-content: center;
+  width: 100%;  
+}
+
+.wrapper{
+    padding: 30px 50px;
+    margin: 10px auto;
+    max-width: 600px;
+    background-color: rgba(216, 216, 216, 0.573);
+}
+img{
+  width: 100%;
+  height: 200px;
+  border-image-repeat: repeat;
+  object-fit: cover;
+}
+h4{
+  
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+label{
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: #777;
+    padding-left: 3px;
+    margin-right: 20px;
+}
+
+input[placeholder]{
+    font-weight: 500;
+    padding: 9px;
+}
+.form-control:focus{
+    box-shadow: none;
+    border: 2px solid #120075;
+}
+.ng-valid:not(form).ng-touched{
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form).ng-touched{
+    border-left: 5px solid red;
+}
+select{
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+select:focus{
+    outline: none;
+}
+input{
+    height: 40px;
+    width: 100%;
+}
+/* .button{
+    background-color: #fff;
+    color: #006075;
+
+} */
+
+.btn-primary{
+    background-color: rgb(11, 5, 69);
+    font-family: MartianMono;
+    border: solid 1px;
+    border-color: rgb(11, 5, 69);
+    border-radius: 38px;
+    padding: 5px;
+}
+.btn-primary:hover{
+    background-color: rgb(22, 10, 129);
+    border-color: rgb(22, 10, 129);
+    color: rgb(252, 252, 252);
+}
+@media(max-width:576px){
+    .wrapper{
+        padding: 25px 20px;
+    }
+    #deactivate{
+        line-height: 18px;
+    }
+}
+form{
+  width: 100%;
+}
+
+/* * {
   box-sizing: border-box;
   margin: 0;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container {
@@ -29,3 +145,4 @@ img {
 .claseA {
   background-color: #006075be;
 }
+ */

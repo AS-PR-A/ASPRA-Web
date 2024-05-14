@@ -10,7 +10,7 @@ export class ListaAdopcionService {
   constructor(private http: HttpClient) {}
 
   verListaAdopcion(): Observable<any> {
-    return this.http.get<any>(this.url + 'pages/animales/');
+    return this.http.get<any>(this.url + 'pages/animales/listado/');
   }
 
   agregar(data: any): Observable<any> {

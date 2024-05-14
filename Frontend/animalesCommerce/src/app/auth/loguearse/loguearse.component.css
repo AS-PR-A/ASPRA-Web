@@ -18,10 +18,16 @@ a:hover{
 }
 
 .btn{
-    background-color:#023B48
+    background-color: rgb(11, 5, 69);
+    font-family: MartianMono;
+    border: solid 1px;
+    border-color: rgb(11, 5, 69);
+    border-radius: 38px;
 }
 .btn:hover{
-    background-color:#006075
+    background-color: rgb(22, 10, 129);
+    border-color: rgb(22, 10, 129);
+    color: rgb(252, 252, 252);
 }
 
 .ng-valid:not(form).ng-touched{
@@ -34,9 +40,9 @@ a:hover{
 
 @media (min-width: 992px) {
     form {
-        background-color: aliceblue;
+        background-color: rgba(216, 216, 216, 0.573);
         margin: 200px auto;
-        padding: 2%;
+        padding: 5%;
         width: 35%;
         height: 35%;      
     }
