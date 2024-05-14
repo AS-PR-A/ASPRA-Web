@@ -6,23 +6,29 @@
 <link rel="stylesheet" href="./finalizar-adopcion.component.css">
 
 <main>
-    <h1>¡Estas a un paso de terminar la adopción!</h1>
-    <form>
-        
-        <div class="horario">
-            <h2>Elige un horario para retirar a tu mascota</h2>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Seleccionar horario de retiro</option>
-                <option value="1">Lunes a Viernes 14:00hs</option>
-                <option value="2">Lunes a Viernes 10:00hs</option>
-                <option value="3">Lunes a Viernes 18:00hs</option>
-            </select>
+    <h1>¡Estás a un paso de terminar la adopción!</h1>
+    <form [formGroup]="form" (ngSubmit)="submitForm($event)">
+      <div class="horario">
+        <h2>Elige un horario para retirar a tu mascota</h2>
+        <select class="form-select" aria-label="Default select example" formControlName="horario">
+          <option value="" disabled selected>Seleccionar horario de retiro</option>
+          <option value="1">Lunes a Viernes 14:00hs</option>
+          <option value="2">Lunes a Viernes 10:00hs</option>
+          <option value="3">Lunes a Viernes 18:00hs</option>
+        </select>
+        <div *ngIf="horario?.errors && horario?.touched">
+          <p *ngIf="horario?.hasError('required')" class="text-danger">Seleccione un horario de retiro</p>
         </div>
-
-        <div class="nombre">
-            <h2>Dale un nombre a tu nueva mascota</h2>
-            <input type="text" class="form-control" placeholder="Nombre" required>
+      </div>
+  
+      <div class="nombre">
+        <h2>Dale un nombre a tu nueva mascota</h2>
+        <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+        <div *ngIf="nombre?.errors && nombre?.touched">
+          <p *ngIf="nombre?.hasError('required')" class="text-danger">Ingrese un nombre para su mascota</p>
         </div>
-        <input class="btn btn-primary" type="submit" value="Adoptar">
+      </div>
+  
+      <input class="btn btn-primary" type="submit" value="Adoptar">
     </form>
-</main>
+  </main>
