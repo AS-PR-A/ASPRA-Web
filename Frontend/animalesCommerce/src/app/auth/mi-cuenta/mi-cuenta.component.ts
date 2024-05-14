@@ -69,7 +69,6 @@ export class MiCuentaComponent implements OnInit{
           if (response){
             alert("Se actualizo perfil!");
             this.router.navigate(['/listaAdopcion/'])
-            window.location.reload();
           } 
         }
       })
