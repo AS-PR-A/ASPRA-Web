@@ -35,7 +35,9 @@ export class LoguearseComponent {
           if (response){
             alert("Inicio aprobado!");
             console.log("DATA" + JSON.stringify(response));
-            this.router.navigate(['/miCuenta/'])
+            this.router.navigate(['/miCuenta/']).then(() => {
+              location.reload();
+            });
           } 
         },
         error: () => {
