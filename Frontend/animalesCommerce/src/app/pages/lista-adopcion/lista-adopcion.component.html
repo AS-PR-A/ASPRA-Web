@@ -45,6 +45,8 @@
                 <p class="card-text"><b> Edad aprox.:</b> {{element.edad}} años</p>
                 <p class="card-text"><b>Tamaño:</b> {{element.tamano}}</p>
                 <a routerLink="/cart" class="btn btn-primary">Añadir al Carrito</a>
+                <button (click)="eliminarAnimal(element.id)" class="btn btn-danger">Eliminar Animal</button>
+                <a [routerLink]="['/modificarAnimal', element.id]" class="btn btn-primary">Modificar Animal</a>
             </div>
         </div>
         

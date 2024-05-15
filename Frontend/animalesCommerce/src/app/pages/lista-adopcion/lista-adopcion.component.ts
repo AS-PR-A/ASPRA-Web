@@ -27,4 +27,20 @@ export class ListaAdopcionComponent implements OnInit{
       }
     })
   }
+  eliminarAnimal(id: number): void {
+    if (confirm('¿Estás seguro de eliminar este animal?')) {
+      this.listAdop.eliminarAnimal(id).subscribe({
+        next: () => {
+          alert('Se eliminó el animal correctamente!');
+          // Volver a cargar la lista de animales después de eliminar
+          this.listaAdopcion();
+        },
+        error: (error) => {
+          console.error('Error al eliminar el animal:', error);
+          alert('Ocurrió un error al eliminar el animal. Por favor, inténtalo de nuevo.');
+        }
+      });
+    }
+  }
+
 }

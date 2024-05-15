@@ -1,34 +1,48 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
-from django.contrib.auth.hashers import make_password
-from .models import Animales, Contacto, Donacion
+from .models import Animal,  Donacion, Refugio, Veterinario, Perfil
+from django.contrib.auth.models import User
 
 
+# ----------user
 class UserSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True)
-    password = serializers.CharField(min_length=8, write_only=True)
-
     class Meta:
-        model = get_user_model()
-        fields = ("email", "password")
+        model = User
+        fields = ('id', 'username', 'email')
 
-    def validate_password(self, value):
-        return make_password(value)
-
-
-class AnimalesSerializer(serializers.ModelSerializer):
+class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Animales
+        model = User
+        fields = ('id', 'username', 'email', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
+
+        return user
+# ------------------fin_user
+
+
+class AnimalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Animal
         fields = "__all__"
-
-
-class ContactoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Contacto
-        fields = "__all__"
-
 
 class DonacionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Donacion
+        fields = "__all__"
+
+class RefugioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Refugio
+        fields = "__all__"
+
+class VeterinarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Veterinario
+        fields = "__all__"
+
+class PerfilSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Perfil
         fields = "__all__"

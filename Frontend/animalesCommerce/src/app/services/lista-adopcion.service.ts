@@ -10,10 +10,20 @@ export class ListaAdopcionService {
   constructor(private http: HttpClient) {}
 
   verListaAdopcion(): Observable<any> {
-    return this.http.get<any>(this.url + 'pages/animales/');
+    return this.http.get<any>(this.url + 'pages/animales/listado/');
   }
 
   agregar(data: any): Observable<any> {
-    return this.http.post(this.url + 'pages/agregarAnimal/', data);
+    return this.http.post(this.url + 'pages/animales/agregar/', data);
+  }
+
+  // Código añadido
+
+  modificarAnimal(id: number, data: any): Observable<any> {
+    return this.http.put(`${this.url}pages/animales/modificar/${id}/`, data);
+  }
+  
+  eliminarAnimal(id: number): Observable<any> {
+    return this.http.delete(`${this.url}pages/animales/${id}/`);
   }
 }

@@ -10,6 +10,6 @@ export class RegistroService {
   constructor(private http: HttpClient) { }
 
   signup(data:any):Observable<any> {
-    return this.http.post(this.url + "auth/signup/",data);
+    return this.http.post(this.url + "auth/registro/",data);
   }
 }
