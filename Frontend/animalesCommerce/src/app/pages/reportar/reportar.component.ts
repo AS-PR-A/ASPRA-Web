@@ -41,10 +41,9 @@ export class ReportarComponent implements OnInit {
 
   submitForm(event: Event) {
     event.preventDefault();
-    if (this.form.valid){
-      alert("Se aprobo su reporte")
-    }else{
-      this.form.markAsTouched();
+    this.form.markAllAsTouched(); // Marcar todos los campos como tocados
+    if (this.form.valid) {
+        alert("Se aprobó su reporte");
     }
-  }
+}
 }
