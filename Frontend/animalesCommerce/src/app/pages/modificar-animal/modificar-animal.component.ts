@@ -10,7 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ModificarAnimalComponent implements OnInit {
   animalId!: number;
+  animal: any;
   animalForm!: FormGroup;
+  datosFormulario: any = {};
 
   constructor(
     private route: ActivatedRoute,
@@ -31,11 +33,11 @@ export class ModificarAnimalComponent implements OnInit {
   obtenerDatosAnimal(): void {
     this.listaAdopcionService.verListaAdopcion().subscribe({
       next: (listaAnimales) => {
-        const animal = listaAnimales.find((animal: any) => animal.id === this.animalId);
-        if (!animal) {
+        this.animal = listaAnimales.find((animal: any) => animal.id === this.animalId);
+        if (!this.animal) {
           console.error('No se encontró el animal con el ID proporcionado.');
         } else {
-          this.inicializarFormulario(animal);
+          this.inicializarFormulario();
         }
       },
       error: (error) => {
@@ -44,21 +46,25 @@ export class ModificarAnimalComponent implements OnInit {
     });
   }
   
-  inicializarFormulario(animal: any): void {
+  inicializarFormulario(): void {
     this.animalForm = this.formBuilder.group({
-      nombre: [animal.nombre, [Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
-      descripcion: [animal.descripcion, [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-      tipo: [animal.tipo, Validators.required],
-      fecha_ingreso: [animal.fecha_ingreso, Validators.required],
-      img: [animal.img || '']
+      nombre: [this.animal.nombre || '', [Validators.required, Validators.minLength(5), Validators.maxLength(30)]],
+      descripcion: [this.animal.descripcion || '', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
+      tipo: [this.animal.tipo || '', Validators.required],
+      fecha_ingreso: [this.animal.fecha_ingreso || '', Validators.required],
+      img: [this.animal.img || '']
     });
   }
 
   onSubmit(): void {
     if (this.animalForm.valid) {
-      const formData = this.animalForm.value;
-      console.log(formData);
-      this.listaAdopcionService.modificarAnimal(this.animalId, formData).subscribe({
+      this.datosFormulario.nombre = this.animalForm.get('nombre')?.value;
+      this.datosFormulario.descripcion = this.animalForm.get('descripcion')?.value;
+      this.datosFormulario.tipo = this.animalForm.get('tipo')?.value;
+      this.datosFormulario.fecha_ingreso = this.animalForm.get('fecha_ingreso')?.value;
+      this.datosFormulario.img = this.animalForm.get('img')?.value;
+      console.log(this.datosFormulario);
+      this.listaAdopcionService.modificarAnimal(this.animalId, this.datosFormulario).subscribe({
         next: () => {
           alert('Se modificó el animal correctamente!');
         },

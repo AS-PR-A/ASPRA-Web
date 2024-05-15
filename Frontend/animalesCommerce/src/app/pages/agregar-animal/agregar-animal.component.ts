@@ -10,8 +10,7 @@ import { ListaAdopcionService } from 'src/app/services/lista-adopcion.service';
 })
 export class AgregarAnimalComponent {
   form;
-  tipos: string[] = ['Perro', 'Gato', 'Grande'];
-  tamano: string[] = ['Chico', 'Mediano', 'Grande'];
+  tipos: string[] = ['Perro', 'Gato', 'Otro'];
   constructor(
     private formBuilder: FormBuilder,
     private listAdop: ListaAdopcionService,
