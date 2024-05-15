@@ -13,15 +13,15 @@
 
 Registro
 
-Login
+Inicio de Sesion
 
 Reportar animal perdido/maltratado
-
-Seguimiento de animales
 
 Contacto con veterinarios
 
 Donaciones a traves de Mercado Pago
+
+Boton flotante para descargar ASPRA Movil
 
 <br>
 
@@ -70,16 +70,30 @@ MySQL
 
 ### [Documento IEEE830](https://docs.google.com/document/d/1yoGYpTMU1NPqZDSuM2iEQeQGeHVx1eCX/edit?usp=sharing&ouid=103416615054896105402&rtpof=true&sd=true)
 
+### [Diagrama de Caso de Uso](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/ASPRA%20web%20Diagrama%20Caso%20de%20Uso%20(Actualizado).pdf)
+
+### [Diagrama de Entidad-Relacion (DER)]()
+
+### [Diagrama de Clases]()
+
+### [Modelo Relacional]()
+
+### [Script de BBDD]()
+
+### [Mapa de Sitio](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/Mapa%20de%20sitio%20ASPRA%20Web%20(Actualizado).pdf)
+
 ### [Wiki](https://github.com/AS-PR-A/ASPRA-Web/wiki)
 
 ### [Tablero Kanban](https://github.com/orgs/AS-PR-A/projects/8/views/1)
 
-### [Milestones](https://github.com/AS-PR-A/ASPRA-Web/milestones)
-
-### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues)
+### [Milestone](https://github.com/AS-PR-A/ASPRA-Web/milestones)
 
 ### [Sprint 1](https://github.com/AS-PR-A/ASPRA-Web/milestone/1)
 
-### [ASPRA MOVIL](https://github.com/AS-PR-A/ASPRA-Movil)
+### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues)
+
+### [Testing](https://github.com/AS-PR-A/ASPRA-Web/tree/main/Testing)
+
+### [ASPRA Movil](https://github.com/AS-PR-A/ASPRA-Movil)
 
 </div>
