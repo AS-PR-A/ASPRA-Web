@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DonacionesService {
-  url: string = 'http://localhost:3000/';
+  url: string = 'http://127.0.0.1:8000/api/pages/donaciones/';
 
   constructor(private http: HttpClient) {}
 
   verDonaciones(): Observable<any> {
-    return this.http.get<any>(this.url + 'donaciones');
+    return this.http.get<any>(this.url);
   }
 }

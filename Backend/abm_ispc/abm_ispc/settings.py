@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'knox',
     'Aspra'
 ]
 
@@ -84,10 +85,15 @@ WSGI_APPLICATION = 'abm_ispc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'buolaz9f1tuv8wod5d2k',
-        'USER' : 'uweqknlvbyh7t9em',
-        'PASSWORD' : '5W5Z0aiPlccRdSyv8QsJ',
-        'HOST': 'buolaz9f1tuv8wod5d2k-mysql.services.clever-cloud.com',
+        # BASE DE DATOS SIN TOKEN
+        # 'NAME': 'buolaz9f1tuv8wod5d2k',
+        # 'USER' : 'uweqknlvbyh7t9em',
+        # 'PASSWORD' : '5W5Z0aiPlccRdSyv8QsJ',
+        # 'HOST': 'buolaz9f1tuv8wod5d2k-mysql.services.clever-cloud.com',
+        'NAME': 'bogwuzyzppxotgufcpad',
+        'USER' : 'urovmncwvejplk7f',
+        'PASSWORD' : 'p9iar40yduSI97VLb6u2',
+        'HOST': 'bogwuzyzppxotgufcpad-mysql.services.clever-cloud.com',
         'PORT' : '3306',
         'OPTIONS': {
             'sql_mode': 'traditional'
@@ -114,8 +120,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "Aspra.CustomUser"
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -137,3 +141,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}

@@ -1,13 +1,11 @@
 <main>
     <form class="container-sm" [formGroup]="form" (ngSubmit)="onEnviar($event)">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
-            <div *ngIf="email?.errors && email?.touched">
-                <p *ngIf="email?.hasError('required')" class="text-danger">El email es requerido</p>
-                <p *ngIf="email?.hasError('email')" class="text-danger">Ingrese un email válido</p>
-            </div>    
-            
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" formControlName="username">
+            <div *ngIf="username?.errors && username?.touched">
+                <p *ngIf="username?.hasError('required')" class="text-danger">El usuario es requerido</p>
+            </div>              
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Contraseña</label>

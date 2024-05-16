@@ -29,17 +29,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  line-height: 80px;
-  background-color: #47b3cb;
-}
-
-.imagen {
-  width: 100px;
-  height: 100px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
-  margin-right: 75px;
-  margin: 30px;
+  line-height: 40px;
+  background-color: rgb(11, 5, 69);
+  color: #47b3cb;
 }
 
 @media only screen and (max-width: 600px) {
@@ -118,6 +110,12 @@ h1 {
   .box2:nth-child(4) {
     grid-column-start: span 1;
   }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 800px;
+    text-align: center;
+  }
 }
 
 .textoVeterinarios {
@@ -133,6 +131,8 @@ h1 {
 p {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 100px;
+  text-align: center;
 }
 
 .box2 p {

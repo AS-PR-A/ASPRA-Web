@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, inject } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,16 +20,20 @@ import { FinalizarAdopcionComponent } from './pages/finalizar-adopcion/finalizar
 import { ListaAdopcionComponent } from './pages/lista-adopcion/lista-adopcion.component';
 import { CartComponent } from './pages/cart/cart.component';
 /* import { ProductDetailsComponent} from './pages/product-details/product-details.component'; */
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MiCuentaComponent } from './auth/mi-cuenta/mi-cuenta.component';
 import { AgregarAnimalComponent } from './pages/agregar-animal/agregar-animal.component';
+import { AuthGuard } from './services/auth/auth.guard';
+import { Interceptor } from './services/auth/interceptor';
+import { ErrorInterceptor } from './services/auth/error.interceptor';
+import { AuthService } from './services/auth/auth.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'refugios', component: RefugiosComponent },
   { path: 'veterinarios', component: VeterinariosComponent },
-  { path: 'loguearse', component: LoguearseComponent },
+  { path: 'login', component: LoguearseComponent },
   { path: 'donaciones', component: DonacionesComponent },
   { path: 'reportar', component: ReportarComponent },
   { path: 'contacto', component: ContactoComponent },
@@ -37,7 +41,7 @@ const appRoutes: Routes = [
   { path: 'finalizarAdopcion', component: FinalizarAdopcionComponent },
   { path: 'listaAdopcion', component: ListaAdopcionComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'miCuenta', component: MiCuentaComponent },
+  { path: 'miCuenta', canActivate:[AuthGuard], component: MiCuentaComponent },
   { path: 'agregarAnimal', component: AgregarAnimalComponent },
 ];
 
@@ -68,7 +72,10 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService,
+    {provide:HTTP_INTERCEPTORS,useClass:Interceptor,multi:true},
+    {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

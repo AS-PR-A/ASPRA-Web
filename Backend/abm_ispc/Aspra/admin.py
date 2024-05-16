@@ -1,13 +1,5 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
-
-
-@admin.register(get_user_model())
-class CustomUserAdmin(UserAdmin):
-    pass
-
 
 admin.site.unregister(Group)
 
@@ -15,81 +7,40 @@ from .models import Refugio
 from .models import Veterinario
 from .models import Donacion
 from .models import Reporte
-from .models import Usuario
-from .models import UsuarioAnimales
+from .models import Perfil
 from .models import TipoAnimal
-from .models import Animales
-from .models import Contacto
-
-
-class ContactoAdmin(admin.ModelAdmin):
-    list_display = ("id_contacto", "horario", "celular", "email")
-
+from .models import Animal
 
 class RefugioAdmin(admin.ModelAdmin):
-    list_display = (
-        "id",
-        "nombre",
-        "telefono",
-        "email",
-        "direccion",
-        "ciudad",
-        "provincia",
-    )
+    list_display = ("nombre", "telefono", "email", "direccion", "ciudad", "provincia")
 
 
 class VeterinariosAdmin(admin.ModelAdmin):
-    list_display = ("matricula", "nombre", "telefono", "email")
+    list_display = ("matricula", "nombre", "telefono", "email","refugio")
 
 
 class DonacionAdmin(admin.ModelAdmin):
-    list_display = ("id", "Usuario", "monto")
+    list_display = ("id", "monto", "nombre", "apellido")
 
 
 class ReporteAdmin(admin.ModelAdmin):
-    list_display = ("direccion", "motivo", "descripcion")
+    list_display = ("id", "direccion", "motivo", "descripcion","usuario")
 
 
-class UsuarioAdmin(admin.ModelAdmin):
-    list_display = (
-        "dni",
-        "nombre",
-        "contrasena",
-        "telefono",
-        "email",
-        "direccion",
-        "ciudad",
-        "provincia",
-    )
-
-
-class UsuarioAnimalesAdmin(admin.ModelAdmin):
-    list_display = ("dni_usuario2", "id_animal1")
-
+class PerfilAdmin(admin.ModelAdmin):
+    list_display = ("id", "usuario","nombre", "apellido", "telefono", "direccion", "ciudad", "provincia")
 
 class TipoAnimalAdmin(admin.ModelAdmin):
-    list_display = ("id", "tipo")
+    list_display = ["tipo"]
 
 
-class AnimalesAdmin(admin.ModelAdmin):
-    list_display = (
-        "id",
-        "nombre",
-        "edad",
-        "tamano",
-        "raza",
-        "fecha_ingreso",
-        "id_refufio",
-        "id_tipo",
-    )
-
+class AnimalAdmin(admin.ModelAdmin):
+    list_display = ("nombre", "descripcion", "fecha_ingreso", "img", "refugio", "tipo", "usuario")
 
 admin.site.register(Refugio, RefugioAdmin)
 admin.site.register(Veterinario, VeterinariosAdmin)
 admin.site.register(Donacion, DonacionAdmin)
 admin.site.register(Reporte, ReporteAdmin)
-admin.site.register(Usuario, UsuarioAdmin)
-admin.site.register(UsuarioAnimales, UsuarioAnimalesAdmin)
+admin.site.register(Perfil, PerfilAdmin)
 admin.site.register(TipoAnimal, TipoAnimalAdmin)
-admin.site.register(Animales, AnimalesAdmin)
-admin.site.register(Contacto, ContactoAdmin)
+admin.site.register(Animal, AnimalAdmin)
