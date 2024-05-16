@@ -72,13 +72,13 @@ MySQL
 
 ### [Diagrama de Caso de Uso](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/ASPRA%20web%20Diagrama%20Caso%20de%20Uso%20(Actualizado).pdf)
 
-### [Diagrama de Entidad-Relacion (DER)]()
+### [Diagrama de Entidad-Relacion (DER)](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/DER%20ASPRA%20web%20(Actualizado).pdf)
 
-### [Diagrama de Clases]()
+### [Diagrama de Clases](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/ASPRA%20web%20diagrama%20de%20clases(actualizado).pdf)
 
-### [Modelo Relacional]()
+### [Modelo Relacional](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/Modelo%20relacional.pdf)
 
-### [Script de BBDD]()
+### [Script de BBDD](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/script.sql)
 
 ### [Mapa de Sitio](https://github.com/AS-PR-A/ASPRA-Web/blob/main/Documentacion/Mapa%20de%20sitio%20ASPRA%20Web%20(Actualizado).pdf)
 
@@ -90,7 +90,7 @@ MySQL
 
 ### [Sprint 1](https://github.com/AS-PR-A/ASPRA-Web/milestone/1)
 
-### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues)
+### [Issues](https://github.com/AS-PR-A/ASPRA-Web/issues?q=)
 
 ### [Testing](https://github.com/AS-PR-A/ASPRA-Web/tree/main/Testing)
 
