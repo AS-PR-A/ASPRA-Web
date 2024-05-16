@@ -1,6 +1,7 @@
 import { NgModule, inject } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -27,6 +28,8 @@ import { AuthGuard } from './services/auth/auth.guard';
 import { Interceptor } from './services/auth/interceptor';
 import { ErrorInterceptor } from './services/auth/error.interceptor';
 import { AuthService } from './services/auth/auth.service';
+import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
+import { AnimalGuard } from './services/animal.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,7 +45,8 @@ const appRoutes: Routes = [
   { path: 'listaAdopcion', component: ListaAdopcionComponent },
   { path: 'cart', component: CartComponent },
   { path: 'miCuenta', canActivate:[AuthGuard], component: MiCuentaComponent },
-  { path: 'agregarAnimal', component: AgregarAnimalComponent },
+  { path: 'agregarAnimal', canActivate:[AnimalGuard], component: AgregarAnimalComponent },
+  { path: 'modificarAnimal/:id', canActivate:[AnimalGuard], component: ModificarAnimalComponent },
 ];
 
 @NgModule({
@@ -64,12 +68,14 @@ const appRoutes: Routes = [
     CartComponent,
     MiCuentaComponent,
     AgregarAnimalComponent,
+    ModificarAnimalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
   ],
   providers: [AuthService,

@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Modificar Animal</h2>
+    <form [formGroup]="animalForm" (ngSubmit)="onSubmit($event)">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" [ngModel]="animal.nombre" class="form-control" id="nombre" name="nombre" formControlName="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+      </div>
+      <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo</label>
+        <select class="form-select" id="tipo" formControlName="tipo">
+          <option value="Perro">Perro</option>
+          <option value="Gato">Gato</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="fecha_ingreso" class="form-label">Fecha de Ingreso</label>
+        <input type="date" class="form-control" id="fecha_ingreso" formControlName="fecha_ingreso">
+      </div>
+      <div class="mb-3">
+        <label for="img" class="form-label">URL de la Imagen</label>
+        <input type="text" class="form-control" id="img" formControlName="img">
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+  </div>

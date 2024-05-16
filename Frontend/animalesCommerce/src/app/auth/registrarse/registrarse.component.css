@@ -8,6 +8,10 @@ form{
     margin: 150px auto;
 }
 
+form{
+    margin: 150px auto;
+}
+
 .btn.btn-primary{
     background-color: rgb(11, 5, 69);
     font-family: MartianMono;
