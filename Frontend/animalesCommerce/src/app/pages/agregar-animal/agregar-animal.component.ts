@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ListaAdopcionService } from 'src/app/services/lista-adopcion.service';
 
+
 @Component({
   selector: 'app-agregar-animal',
   templateUrl: './agregar-animal.component.html',
@@ -9,10 +10,10 @@ import { ListaAdopcionService } from 'src/app/services/lista-adopcion.service';
 })
 export class AgregarAnimalComponent {
   form;
-
+  tipos: string[] = ['Perro', 'Gato', 'Otro'];
   constructor(
     private formBuilder: FormBuilder,
-    private listAdop: ListaAdopcionService
+    private listAdop: ListaAdopcionService,
   ) {
     this.form = this.formBuilder.group({
       nombre: [
@@ -23,11 +24,7 @@ export class AgregarAnimalComponent {
           Validators.maxLength(30),
         ],
       ],
-      edad: [
-        '',
-        [Validators.required, Validators.minLength(1), Validators.maxLength(3)],
-      ],
-      raza: [
+      descripcion: [
         '',
         [
           Validators.required,
@@ -35,8 +32,7 @@ export class AgregarAnimalComponent {
           Validators.maxLength(15),
         ],
       ],
-      tipo: 'Gato',
-      tamano: 'Mediano',
+      tipo: ['', Validators.required],
       fecha_ingreso: [
         '',
         [
@@ -54,46 +50,33 @@ export class AgregarAnimalComponent {
   get nombre() {
     return this.form.get('nombre');
   }
-  get edad() {
-    return this.form.get('edad');
-  }
-  get raza() {
-    return this.form.get('raza');
+  get descripcion() {
+    return this.form.get('descripcion');
   }
   get fecha() {
     return this.form.get('fecha_ingreso');
+  }
+  get img() {
+    return this.form.get('img');
   }
 
   onEnviar(event: Event) {
     event.preventDefault();
     if (this.form.valid) {
       console.log(this.form.value);
-      this.listAdop.verListaAdopcion().subscribe({
+      const formData = this.form.value;
+      this.listAdop.agregar(formData).subscribe({
         next: () => {
-          alert('Se agrego Animal!');
+          alert('Se agregó el animal correctamente!');
         },
+        error: (error) => {
+          console.error('Error al agregar el animal:', error);
+          alert('Ocurrió un error al agregar el animal. Por favor, inténtalo de nuevo.');
+        }
       });
     }
     this.form.markAllAsTouched();
   }
+  
 
-  // listaAdopcion():any {
-  //   this.listAdop.verListaAdopcion().subscribe({
-  //     next: (response) => {
-  //       this.lista = response
-  //     },
-  //     error: (errorResponse) => {
-  //       console.error(errorResponse)
-  //     }
-  //   })
-  // }
-
-  // agregarEstudio (formAgr: NgForm):void{
-  //   this.datosPortfolio.agregarDatos(this.path,formAgr.value).subscribe({
-  //   next: () => {
-  //     this.verEstudios();
-  //     this.agregar = false;
-  //   }
-  // })
-  // }
 }

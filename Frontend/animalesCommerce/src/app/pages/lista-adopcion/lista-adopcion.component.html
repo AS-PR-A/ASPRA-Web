@@ -46,6 +46,8 @@
                 <p class="card-text"><b>Tipo:</b> {{element.tipo}}</p>
                 <p class="card-text"><b>Descripción:</b> {{element.descripcion}}</p>
                 <a routerLink="/cart" class="btn btn-primary">Añadir al Carrito</a>
+                <button (click)="eliminarAnimal(element.id)" class="btn btn-danger">Eliminar Animal</button>
+                <a [routerLink]="['/modificarAnimal', element.id]" class="btn btn-primary">Modificar Animal</a>
             </div>
         </div>
         
