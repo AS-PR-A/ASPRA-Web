@@ -1,7 +1,7 @@
 <main>
     <div style="display: flex; align-content: center;">
         <h1 >Animales en Adopcion</h1>
-        <a routerLink="/agregarAnimal" class="btn btn-success btn-sm" style="padding: 10px; align-self: center; margin-left: 20px;"><i class="fa-solid fa-plus fa-lg"></i> Agregar animal</a>
+        <a *ngIf="isAdmin" routerLink="/agregarAnimal" class="btn btn-success btn-sm" style="padding: 10px; align-self: center; margin-left: 20px;"><i class="fa-solid fa-plus fa-lg"></i> Agregar animal</a>
     </div>
 
     <div class="filtros">
@@ -46,8 +46,8 @@
                 <p class="card-text"><b>Tipo:</b> {{element.tipo}}</p>
                 <p class="card-text"><b>Descripción:</b> {{element.descripcion}}</p>
                 <a routerLink="/cart" class="btn btn-primary">Añadir al Carrito</a>
-                <button (click)="eliminarAnimal(element.id)" class="btn btn-danger">Eliminar Animal</button>
-                <a [routerLink]="['/modificarAnimal', element.id]" class="btn btn-primary">Modificar Animal</a>
+                <button *ngIf="isAdmin" (click)="eliminarAnimal(element.id)" class="btn btn-danger">Eliminar Animal</button>
+                <a *ngIf="isAdmin" [routerLink]="['/modificarAnimal', element.id]" class="btn btn-primary">Modificar Animal</a>
             </div>
         </div>
         

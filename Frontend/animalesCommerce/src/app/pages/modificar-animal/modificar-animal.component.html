@@ -1,9 +1,9 @@
 <div class="container">
     <h2>Modificar Animal</h2>
-    <form [formGroup]="animalForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="animalForm" (ngSubmit)="onSubmit($event)">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+        <input type="text" [ngModel]="animal.nombre" class="form-control" id="nombre" name="nombre" formControlName="nombre">
       </div>
       <div class="mb-3">
         <label for="descripcion" class="form-label">Descripcion</label>

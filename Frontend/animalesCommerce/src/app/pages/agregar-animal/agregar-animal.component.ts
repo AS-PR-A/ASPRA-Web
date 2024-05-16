@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ListaAdopcionService } from 'src/app/services/lista-adopcion.service';
 
 
@@ -14,6 +15,7 @@ export class AgregarAnimalComponent {
   constructor(
     private formBuilder: FormBuilder,
     private listAdop: ListaAdopcionService,
+    private router:Router
   ) {
     this.form = this.formBuilder.group({
       nombre: [
@@ -29,7 +31,7 @@ export class AgregarAnimalComponent {
         [
           Validators.required,
           Validators.minLength(3),
-          Validators.maxLength(15),
+          Validators.maxLength(45),
         ],
       ],
       tipo: ['', Validators.required],
@@ -43,7 +45,7 @@ export class AgregarAnimalComponent {
       ],
       id_refufio: 1,
       id_tipo: 2,
-      img: '',
+      img: [''],
     });
   }
 
@@ -68,6 +70,7 @@ export class AgregarAnimalComponent {
       this.listAdop.agregar(formData).subscribe({
         next: () => {
           alert('Se agregó el animal correctamente!');
+          this.router.navigate(['/listaAdopcion/'])
         },
         error: (error) => {
           console.error('Error al agregar el animal:', error);
