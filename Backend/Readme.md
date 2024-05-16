@@ -7,11 +7,15 @@
    ```
    python -m pip install virtualenv
    ```
-4. Crea un entorno virtual con el siguiente comando:
+3. Crea el entorno virtual "django" con el siguiente comando:
    ```
    python -m venv django
    ```
-5. Activa el entorno virtual con el siguiente comando:
+4. Crea el entorno virtual "venv" con el siguiente comando:
+   ```
+   virtualenv -p python3 venv
+   ```
+5. Inicia el entorno virtual con el siguiente comando:
    ```
    venv\Scripts\activate  # En Windows
    source django/bin/activate  # En Unix o MacOS
@@ -30,7 +34,7 @@
    ```
    python -m pip install django-rest-knox
    ```
-9. Activa Django con el siguiente comando:
+9. Inicia Django con el siguiente comando:
    ```
    django\Scripts\activate  # En Windows
    source django/bin/activate  # En Unix o MacOS
