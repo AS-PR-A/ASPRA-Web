@@ -29,6 +29,7 @@ import { Interceptor } from './services/auth/interceptor';
 import { ErrorInterceptor } from './services/auth/error.interceptor';
 import { AuthService } from './services/auth/auth.service';
 import { ModificarAnimalComponent } from './pages/modificar-animal/modificar-animal.component';
+import { AnimalGuard } from './services/animal.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,8 +45,8 @@ const appRoutes: Routes = [
   { path: 'listaAdopcion', component: ListaAdopcionComponent },
   { path: 'cart', component: CartComponent },
   { path: 'miCuenta', canActivate:[AuthGuard], component: MiCuentaComponent },
-  { path: 'agregarAnimal', component: AgregarAnimalComponent },
-  { path: 'modificarAnimal/:id', component: ModificarAnimalComponent },
+  { path: 'agregarAnimal', canActivate:[AnimalGuard], component: AgregarAnimalComponent },
+  { path: 'modificarAnimal/:id', canActivate:[AnimalGuard], component: ModificarAnimalComponent },
 ];
 
 @NgModule({
